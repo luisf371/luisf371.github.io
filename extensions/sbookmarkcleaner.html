@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
+  
+  <title>sBookmarkCleaner - Chrome Extension | tekky.cc</title>
+  <meta name="description" content="Automatically find and remove broken bookmarks, detect redirects, and identify duplicates to keep your bookmarks clean and organized.">
+  
+  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/extension.css">
+  <link rel="canonical" href="https://tekky.cc/extensions/sbookmarkcleaner.html">
+</head>
+<body>
+  
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="/" class="nav-brand">tekky.cc</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-icon"></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/" class="nav-link">Extensions</a></li>
+        <li><a href="/blog/" class="nav-link">Blog</a></li>
+        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="/#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+  
+  <header class="extension-header">
+    <div class="container">
+      <a href="/" class="back-link">Back to Extensions</a>
+      
+      <div class="extension-header-content">
+        <img src="/assets/images/icons/sbookmarkcleaner.png" alt="sBookmarkCleaner icon" class="extension-header-icon">
+        
+        <div class="extension-header-info">
+          <h1 class="extension-title">sBookmarkCleaner</h1>
+          <p class="extension-tagline">Keep your bookmarks clean and organized</p>
+          
+          <div class="extension-meta">
+            <span class="tag tag-primary">Productivity</span>
+            <span class="tag">Utilities</span>
+            <span class="tag tag-success">Original</span>
+            <span class="tag">Manifest V3</span>
+          </div>
+          
+          <div class="extension-actions">
+            <a href="https://github.com/[YOURUSERNAME]/sBookmarkCleaner" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <button class="btn btn-secondary" disabled>Coming Soon on Chrome Web Store</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <main class="extension-content">
+    
+    <section class="content-section">
+      <h2 class="section-heading">Overview</h2>
+      <p>
+        sBookmarkCleaner (Simple Bookmark Cleaner) is an original Chrome extension designed to help you maintain a clean and organized bookmark collection. Over time, bookmarks can become outdated, broken, or duplicated, making it difficult to find what you need.
+      </p>
+      <p>
+        This extension automatically scans your bookmarks to identify broken links (404 errors), detect redirects that indicate moved or changed pages, and find duplicate bookmarks across your collection. The background processing ensures your browsing experience isn't interrupted while the scan runs.
+      </p>
+      <p>
+        Once the scan is complete, you'll receive a detailed report showing all problematic bookmarks with options to selectively remove them or clean them all at once.
+      </p>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">Key Features</h2>
+      <ul class="features-list">
+        <li><strong>Broken Link Detection:</strong> Automatically finds bookmarks that return 404 errors or other failure codes</li>
+        <li><strong>Redirect Identification:</strong> Detects redirects that may indicate moved or changed URLs</li>
+        <li><strong>Duplicate Finder:</strong> Identifies duplicate bookmarks across your entire collection with location info</li>
+        <li><strong>Background Processing:</strong> Scans run in the background without interrupting your browsing</li>
+        <li><strong>Progress Tracking:</strong> See real-time progress with "Checking Bookmark #22 out of 1239" style updates</li>
+        <li><strong>Detailed Reports:</strong> Comprehensive cleanup reports showing all issues found</li>
+        <li><strong>Selective Deletion:</strong> Choose which bookmarks to remove with checkboxes and select/clear all options</li>
+        <li><strong>Alphabetical Sorting:</strong> Nested alphabetical organization (folders first, then bookmarks within)</li>
+        <li><strong>Non-Blocking:</strong> Continues scanning even if tabs are closed (only stops when Chrome closes)</li>
+      </ul>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">Screenshots</h2>
+      <div class="screenshot-placeholder">
+        <div class="screenshot-placeholder-icon">📸</div>
+        <h3 class="screenshot-placeholder-title">Screenshots Coming Soon</h3>
+        <p class="screenshot-placeholder-text">
+          Preview images will be added shortly to showcase the scanning interface and cleanup reports.
+        </p>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">Installation</h2>
+      
+      <div class="installation-methods">
+        <div class="installation-method">
+          <h3>Option 1: Chrome Web Store (Coming Soon)</h3>
+          <p>This extension will be available on the Chrome Web Store soon. Check back for updates!</p>
+        </div>
+        
+        <div class="installation-method">
+          <h3>Option 2: Install from Source (Developer Mode)</h3>
+          <ol>
+            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/sBookmarkCleaner" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
+            <li>Enable <strong>"Developer mode"</strong> using the toggle in the top right corner</li>
+            <li>Click <strong>"Load unpacked"</strong></li>
+            <li>Select the directory where you downloaded/cloned the extension</li>
+            <li>Click the extension icon in your toolbar to start scanning your bookmarks</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">How It Works</h2>
+      <p>
+        <strong>1. Initiate Scan:</strong> Click the extension icon and choose "Start Scan" to begin checking your bookmarks.
+      </p>
+      <p>
+        <strong>2. Background Processing:</strong> The extension navigates through each bookmark in the background, checking for 404 errors, redirects, and duplicates. You'll see real-time progress updates.
+      </p>
+      <p>
+        <strong>3. Review Report:</strong> Once complete, a detailed report shows all problematic bookmarks with their URLs and locations in your bookmark tree.
+      </p>
+      <p>
+        <strong>4. Clean Up:</strong> Use checkboxes to select which bookmarks to remove, or use "Select All" to remove all broken links at once. Click "Confirm" before deletion.
+      </p>
+    </section>
+    
+    <section class="content-section">
+      <h2 class="section-heading">Technical Details</h2>
+      <table class="technical-table">
+        <tr>
+          <td>Version</td>
+          <td>1.0.0</td>
+        </tr>
+        <tr>
+          <td>Manifest Version</td>
+          <td>V3</td>
+        </tr>
+        <tr>
+          <td>Permissions</td>
+          <td>bookmarks, tabs, storage, alarms, host_permissions (all_urls)</td>
+        </tr>
+        <tr>
+          <td>Type</td>
+          <td>Original</td>
+        </tr>
+        <tr>
+          <td>Status</td>
+          <td>Active Development</td>
+        </tr>
+      </table>
+    </section>
+    
+    <footer class="extension-footer">
+      <a href="https://github.com/[YOURUSERNAME]/sBookmarkCleaner" target="_blank" rel="noopener noreferrer">View Source Code</a>
+      <a href="https://github.com/[YOURUSERNAME]/sBookmarkCleaner/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
+      <a href="/">← Back to Portfolio</a>
+    </footer>
+    
+  </main>
+  
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <ul class="footer-links">
+          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
+          <li><a href="#" class="footer-link">Privacy</a></li>
+        </ul>
+        <p class="footer-copyright">&copy; 2026 tekky.cc. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="/assets/js/main.js"></script>
+  
+</body>
+</html>
