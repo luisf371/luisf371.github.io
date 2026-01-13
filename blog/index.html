@@ -5,8 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
   
-  <title>Blog - Coming Soon | tekky.cc</title>
-  <meta name="description" content="Blog coming soon. Stay tuned for articles about Chrome extensions, web development, and productivity tips.">
+  <title>Blog | tekky.cc</title>
+  <meta name="description" content="Articles about Chrome extension development, productivity tips, and web development from tekky.cc">
+  <meta name="keywords" content="chrome extensions, web development, javascript, productivity, blog">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://tekky.cc/blog/">
+  <meta property="og:title" content="Blog | tekky.cc">
+  <meta property="og:description" content="Articles about Chrome extension development, productivity tips, and web development">
+  <meta property="og:image" content="https://tekky.cc/assets/images/og-image.png">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://tekky.cc/blog/">
+  <meta property="twitter:title" content="Blog | tekky.cc">
+  <meta property="twitter:description" content="Articles about Chrome extension development, productivity tips, and web development">
+  <meta property="twitter:image" content="https://tekky.cc/assets/images/og-image.png">
   
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
   <link rel="stylesheet" href="/assets/css/main.css">
@@ -31,17 +44,39 @@
   </nav>
   
   <main>
-    <div class="blog-placeholder">
-      <div class="blog-placeholder-icon">📝</div>
-      <h1 class="blog-placeholder-title">Blog Coming Soon</h1>
-      <p class="blog-placeholder-text">
-        I'm working on creating content about Chrome extension development, productivity tips, and web technologies. Check back soon for updates!
-      </p>
-      <div class="blog-placeholder-actions">
-        <a href="/" class="btn btn-primary">View Extensions</a>
-        <a href="https://github.com/[YOURUSERNAME]" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Follow on GitHub</a>
+    <!-- Blog Header -->
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-header-title">Blog</h1>
+        <p class="blog-header-description">
+          Articles about Chrome extension development, productivity tips, and web development
+        </p>
       </div>
-    </div>
+    </header>
+    
+    <!-- Blog Posts -->
+    <section class="blog-posts">
+      <div class="container">
+        
+        <!-- Posts will be dynamically loaded here -->
+        <div id="blog-posts-container" class="blog-posts-grid">
+          <!-- Loading state -->
+          <div class="blog-post-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+            <p style="color: var(--text-tertiary);">Loading posts...</p>
+          </div>
+        </div>
+        
+        <!-- Empty state (hidden by default, shown if no posts) -->
+        <div id="blog-empty" class="blog-empty" style="display: none;">
+          <div class="blog-empty-icon">📝</div>
+          <p class="blog-empty-text">No posts yet. Check back soon!</p>
+          <div style="margin-top: 2rem;">
+            <a href="/" class="btn btn-primary">View Extensions</a>
+          </div>
+        </div>
+        
+      </div>
+    </section>
   </main>
   
   <footer class="footer">
@@ -58,6 +93,7 @@
   </footer>
   
   <script src="/assets/js/main.js"></script>
+  <script src="/assets/js/blog.js"></script>
   
 </body>
 </html>

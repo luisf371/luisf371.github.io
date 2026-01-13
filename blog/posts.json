@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "title": "Welcome to the tekky.cc Blog",
+      "slug": "welcome-to-tekky-blog",
+      "date": "2026-01-15",
+      "dateFormatted": "January 15, 2026",
+      "description": "Introducing the tekky.cc blog - a place to share insights about Chrome extension development, productivity tips, and web development.",
+      "tags": ["Announcement", "Chrome Extensions"],
+      "readTime": "3 min read",
+      "featured": true
+    }
+  ]
+}

@@ -80,3 +80,22 @@ This portfolio website code is open source. Individual Chrome extensions have th
 ---
 
 **Note:** Replace `[YOURUSERNAME]` with your actual GitHub username throughout the codebase.
+
+## 📝 Blog
+
+The portfolio includes a fully functional manual blog system:
+
+- **Write posts in HTML** using the provided template
+- **No build process** - matches the static HTML/CSS/JS approach
+- **Dynamic listing** - posts automatically appear on blog index
+- **Easy to use** - copy template, edit, add to JSON, deploy
+
+See **BLOG_INSTRUCTIONS.md** for detailed instructions on adding blog posts.
+
+**Quick start:**
+```bash
+cp blog/post-template.html blog/my-post.html
+# Edit my-post.html and blog/posts.json
+git add blog/ && git commit -m "Add blog post" && git push
+```
+

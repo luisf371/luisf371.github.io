@@ -278,3 +278,76 @@ All core files are complete and ready for deployment. Follow the "Next Steps to 
 **Estimated time to launch:** 1-2 hours (plus 24-48hrs for DNS)
 
 Good luck with your portfolio! 🚀
+
+---
+
+## 📝 Blog System (Manual - Added 2026-01-12)
+
+Your portfolio now includes a **fully functional manual blog system**!
+
+### What Was Added
+
+**Files Created:**
+- ✅ `blog/post-template.html` - Template for new blog posts
+- ✅ `blog/posts.json` - Blog posts database
+- ✅ `blog/welcome-to-tekky-blog.html` - Example first post
+- ✅ `assets/js/blog.js` - JavaScript to load posts dynamically
+- ✅ `BLOG_INSTRUCTIONS.md` - Complete blogging guide
+- ✅ Updated `blog/index.html` - Now dynamically lists posts
+- ✅ Updated `assets/css/blog.css` - Full blog styling
+
+**Features:**
+- ✅ Dynamic post listing from JSON file
+- ✅ Responsive blog post cards
+- ✅ Featured post highlighting
+- ✅ Tags and categories
+- ✅ Reading time estimates
+- ✅ Share buttons
+- ✅ Related posts section
+- ✅ Mobile responsive
+
+### How to Add Blog Posts
+
+See **BLOG_INSTRUCTIONS.md** for detailed instructions.
+
+**Quick Start:**
+1. Copy `blog/post-template.html` to `blog/your-post-slug.html`
+2. Edit the new file (update title, content, meta tags)
+3. Add entry to `blog/posts.json`
+4. Test locally: `python -m http.server 8000`
+5. Commit and push!
+
+**Example:**
+```bash
+cp blog/post-template.html blog/my-new-post.html
+# Edit my-new-post.html
+# Add entry to posts.json
+git add blog/
+git commit -m "Add blog post: My New Post"
+git push origin main
+```
+
+### Blog Features
+
+**Automatic:**
+- Posts sorted by date (newest first)
+- Responsive grid layout (2 columns on desktop)
+- SEO-optimized meta tags
+- Social sharing ready
+- Mobile-friendly
+
+**Manual:**
+- Write posts in HTML using template
+- Update posts.json to list new posts
+- No build process required
+
+### Future Upgrades
+
+When you're ready for more features:
+- Add syntax highlighting (Prism.js)
+- Add comments (utterances/giscus)
+- Generate RSS feed
+- Migrate to Jekyll/11ty for easier posting
+
+---
+
