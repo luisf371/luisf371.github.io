@@ -1,7 +1,48 @@
 /**
  * tekky.cc - Main JavaScript
- * Navigation, interactions, and utilities
+ * Navigation, interactions, theme switching, and utilities
  */
+
+// Theme Toggle Functionality
+(function() {
+  // Get saved theme from localStorage or default to light
+  const savedTheme = localStorage.getItem('theme') || 'light';
+  
+  // Apply theme immediately to prevent flash
+  document.documentElement.setAttribute('data-theme', savedTheme);
+  
+  // Wait for DOM to be ready
+  document.addEventListener('DOMContentLoaded', function() {
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    if (themeToggle) {
+      // Set initial ARIA label
+      updateThemeToggleAriaLabel(savedTheme);
+      
+      // Add click handler
+      themeToggle.addEventListener('click', function() {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+        
+        // Apply new theme
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update ARIA label
+        updateThemeToggleAriaLabel(newTheme);
+      });
+    }
+  });
+  
+  function updateThemeToggleAriaLabel(theme) {
+    const themeToggle = document.getElementById('theme-toggle');
+    if (themeToggle) {
+      themeToggle.setAttribute('aria-label', 
+        theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'
+      );
+    }
+  }
+})();
 
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
