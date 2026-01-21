@@ -1,113 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
-  
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+
   <title>sSummarizer - Chrome Extension | tekky.cc</title>
-  <meta name="description" content="AI-powered summarization for web pages and YouTube videos. Transform long content into concise summaries instantly with multiple AI model support.">
-  
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/extension.css">
+  <meta name="description"
+    content="AI-powered summarization for web pages and YouTube videos. Transform long content into concise summaries instantly with multiple AI model support.">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/extension.css">
   <link rel="canonical" href="https://tekky.cc/extensions/ssummarizer.html">
 </head>
+
 <body>
-  
+
   <nav class="nav">
     <div class="nav-container">
-      <a href="/" class="nav-brand">tekky.cc</a>
+      <a href="../" class="nav-brand">tekky.cc</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="nav-toggle-icon"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/" class="nav-link">Extensions</a></li>
-        <li><a href="/blog/" class="nav-link">Blog</a></li>
-        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="/#contact" class="nav-link">Contact</a></li>
+        <li><a href="../#extensions" class="nav-link">Extensions</a></li>
+        <li><a href="../#applications" class="nav-link">Applications</a></li>
+        <li><a href="../blog/" class="nav-link">Blog</a></li>
+        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank"
+            rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
         <li>
           <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
             <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
             <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="5"/>
-              <line x1="12" y1="1" x2="12" y2="3"/>
-              <line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/>
-              <line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </svg>
           </button>
         </li>
       </ul>
     </div>
   </nav>
-  
+
   <header class="extension-header">
     <div class="container">
       <a href="/" class="back-link">Back to Extensions</a>
-      
+
       <div class="extension-header-content">
-        <img src="/assets/images/icons/ssummarizer.png" alt="sSummarizer icon" class="extension-header-icon">
-        
+        <img src="../assets/images/icons/ssummarizer.png" alt="sSummarizer icon" class="extension-header-icon">
+
         <div class="extension-header-info">
           <h1 class="extension-title">sSummarizer</h1>
           <p class="extension-tagline">AI-powered web content summarization</p>
-          
+
           <div class="extension-meta">
             <span class="tag tag-primary">AI</span>
             <span class="tag">Productivity</span>
             <span class="tag tag-success">Original</span>
             <span class="tag">Manifest V3</span>
           </div>
-          
+
           <div class="extension-actions">
-            <a href="https://github.com/[YOURUSERNAME]/sSummarizer" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a href="https://github.com/[YOURUSERNAME]/sSummarizer" class="btn btn-primary" target="_blank"
+              rel="noopener noreferrer">View on GitHub</a>
             <button class="btn btn-secondary" disabled>Coming Soon on Chrome Web Store</button>
           </div>
         </div>
       </div>
     </div>
   </header>
-  
+
   <main class="extension-content">
-    
+
     <section class="content-section">
       <h2 class="section-heading">Overview</h2>
       <p>
-        sSummarizer (Simple Summarizer) is an AI-powered Chrome extension that transforms long articles and YouTube videos into concise, easy-to-digest summaries. Whether you're researching, learning, or just trying to save time, sSummarizer helps you quickly understand the key points of any web content.
+        sSummarizer (Simple Summarizer) is an AI-powered Chrome extension that transforms long articles and YouTube
+        videos into concise, easy-to-digest summaries. Whether you're researching, learning, or just trying to save
+        time, sSummarizer helps you quickly understand the key points of any web content.
       </p>
       <p>
-        The extension supports multiple AI providers including OpenAI (GPT models), Anthropic (Claude), and any compatible API endpoint. It features a beautiful floating window interface with real-time streaming responses, so you can watch the summary being generated live.
+        The extension supports multiple AI providers including OpenAI (GPT models), Anthropic (Claude), and any
+        compatible API endpoint. It features a beautiful floating window interface with real-time streaming responses,
+        so you can watch the summary being generated live.
       </p>
       <p>
-        For YouTube videos, sSummarizer automatically extracts transcripts and summarizes the video content without needing to watch the entire video. The floating window is draggable and resizable, with adjustable font sizes for better readability.
+        For YouTube videos, sSummarizer automatically extracts transcripts and summarizes the video content without
+        needing to watch the entire video. The floating window is draggable and resizable, with adjustable font sizes
+        for better readability.
       </p>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Key Features</h2>
       <ul class="features-list">
-        <li><strong>Web Page Summarization:</strong> Summarize any article, blog post, or web page instantly</li>
-        <li><strong>YouTube Video Summaries:</strong> Extract and summarize video transcripts automatically</li>
-        <li><strong>Multiple AI Models:</strong> Supports GPT-3.5, GPT-4, Claude, and custom API endpoints</li>
-        <li><strong>Real-Time Streaming:</strong> Watch summaries being generated live with streaming responses</li>
-        <li><strong>Floating Window Interface:</strong> Modern, draggable, and resizable summary display</li>
-        <li><strong>Font Size Controls:</strong> Adjustable text size (A⁺/A⁻ buttons) for better readability</li>
-        <li><strong>Minimize/Maximize:</strong> Collapsible windows to save screen space</li>
-        <li><strong>Custom System Prompts:</strong> Tailor AI behavior for specific use cases</li>
-        <li><strong>Connection Testing:</strong> Verify API settings before use</li>
-        <li><strong>Input Validation:</strong> Real-time form validation with helpful feedback</li>
-        <li><strong>Security:</strong> Content sanitization to prevent XSS attacks</li>
-        <li><strong>Performance Optimized:</strong> Text truncation (50,000 char limit) to prevent oversized requests</li>
+        <li><strong>Multi-Provider AI Support:</strong> Connect to OpenAI, Anthropic, Gemini, Groq, Azure, and more</li>
+        <li><strong>YouTube Intelligence:</strong> Automatic transcript extraction with timestamp support and subtitle
+          preferences</li>
+        <li><strong>Reddit Optimization:</strong> Summarize entire threads with customizable comment depth and sorting
+          logic</li>
+        <li><strong>Context Menu Integration:</strong> Highlight any text and summarize it instantly via the right-click
+          menu</li>
+        <li><strong>Real-Time Streaming:</strong> Watch summaries generate in real-time with a smooth, responsive
+          interface</li>
+        <li><strong>Floating Window Interface:</strong> Draggable and resizable summary display with font size controls
+        </li>
+        <li><strong>Debug Mode:</strong> Inspect extracted content to understand the data being sent to the AI</li>
+        <li><strong>Security & Privacy:</strong> Content sanitization and local storage of API keys</li>
+        <li><strong>Performance Optimized:</strong> Efficient extraction with auto-truncation for oversized content</li>
       </ul>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Supported AI Providers</h2>
       <p>
@@ -120,10 +135,11 @@
         <li><strong>Local Models:</strong> Self-hosted AI models with compatible APIs</li>
       </ul>
       <p style="margin-top: 1.5rem;">
-        Configure your API endpoint, key, and model in the extension options page. The extension includes a connection tester to verify your settings work correctly.
+        Configure your API endpoint, key, and model in the extension options page. The extension includes a connection
+        tester to verify your settings work correctly.
       </p>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Screenshots</h2>
       <div class="screenshot-placeholder">
@@ -134,20 +150,21 @@
         </p>
       </div>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Installation & Setup</h2>
-      
+
       <div class="installation-methods">
         <div class="installation-method">
           <h3>Option 1: Chrome Web Store (Coming Soon)</h3>
           <p>This extension will be available on the Chrome Web Store soon. Check back for updates!</p>
         </div>
-        
+
         <div class="installation-method">
           <h3>Option 2: Install from Source (Developer Mode)</h3>
           <ol>
-            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/sSummarizer" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/sSummarizer"
+                target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
             <li>Enable <strong>"Developer mode"</strong> using the toggle in the top right corner</li>
             <li>Click <strong>"Load unpacked"</strong></li>
@@ -155,13 +172,17 @@
             <li>Click the extension icon and select "Options" to configure your API settings</li>
           </ol>
         </div>
-        
+
         <div class="installation-method">
           <h3>Configuration</h3>
           <ol>
-            <li><strong>API Endpoint URL:</strong> Enter your AI service endpoint (e.g., <code>https://api.openai.com/v1/chat/completions</code>)</li>
+            <li><strong>API Endpoint URL:</strong> Enter your AI service endpoint (e.g.,
+              <code>https://api.openai.com/v1/chat/completions</code>)
+            </li>
             <li><strong>API Key:</strong> Your authentication key from the AI provider</li>
-            <li><strong>Model Name:</strong> Specify which model to use (e.g., <code>gpt-3.5-turbo</code>, <code>gpt-4</code>)</li>
+            <li><strong>Model Name:</strong> Specify which model to use (e.g., <code>gpt-3.5-turbo</code>,
+              <code>gpt-4</code>)
+            </li>
             <li><strong>System Prompt (Optional):</strong> Custom instructions for the AI to follow</li>
             <li>Click <strong>"Test Connection"</strong> to verify your settings</li>
             <li>Click <strong>"Save"</strong> to store your configuration</li>
@@ -169,26 +190,29 @@
         </div>
       </div>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">How to Use</h2>
       <p>
-        <strong>For Web Pages:</strong> Navigate to any webpage and click the extension icon. The extension will extract the text content and generate a summary in a floating window.
+        <strong>For Web Pages:</strong> Navigate to any webpage and click the extension icon. The extension will extract
+        the text content and generate a summary in a floating window.
       </p>
       <p>
-        <strong>For YouTube Videos:</strong> Open any YouTube video page and click the extension icon. sSummarizer will extract the video's auto-generated transcript and create a summary.
+        <strong>For YouTube Videos:</strong> Open any YouTube video page and click the extension icon. sSummarizer will
+        extract the video's auto-generated transcript and create a summary.
       </p>
       <p>
-        <strong>Window Controls:</strong> Drag the title bar to move the window, use A⁺/A⁻ buttons to adjust font size, click − to minimize, or × to close.
+        <strong>Window Controls:</strong> Drag the title bar to move the window, use A⁺/A⁻ buttons to adjust font size,
+        click − to minimize, or × to close.
       </p>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Technical Details</h2>
       <table class="technical-table">
         <tr>
           <td>Version</td>
-          <td>1.11</td>
+          <td>1.12</td>
         </tr>
         <tr>
           <td>Manifest Version</td>
@@ -196,36 +220,35 @@
         </tr>
         <tr>
           <td>Permissions</td>
-          <td>activeTab, scripting, storage, contextMenus, YouTube host permissions</td>
+          <td>activeTab, scripting, storage, contextMenus</td>
         </tr>
         <tr>
           <td>Type</td>
           <td>Original</td>
         </tr>
         <tr>
-          <td>Content Limit</td>
-          <td>50,000 characters (auto-truncated)</td>
-        </tr>
-        <tr>
           <td>Status</td>
-          <td>Version 2.0 - Active</td>
+          <td>Active (v1.12)</td>
         </tr>
       </table>
     </section>
-    
+
     <footer class="extension-footer">
-      <a href="https://github.com/[YOURUSERNAME]/sSummarizer" target="_blank" rel="noopener noreferrer">View Source Code</a>
-      <a href="https://github.com/[YOURUSERNAME]/sSummarizer/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
-      <a href="/">← Back to Portfolio</a>
+      <a href="https://github.com/[YOURUSERNAME]/sSummarizer" target="_blank" rel="noopener noreferrer">View Source
+        Code</a>
+      <a href="https://github.com/[YOURUSERNAME]/sSummarizer/issues" target="_blank" rel="noopener noreferrer">Report
+        Issues</a>
+      <a href="../">← Back to Portfolio</a>
     </footer>
-    
+
   </main>
-  
+
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <ul class="footer-links">
-          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank"
+              rel="noopener noreferrer">GitHub</a></li>
           <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
           <li><a href="#" class="footer-link">Privacy</a></li>
         </ul>
@@ -233,8 +256,9 @@
       </div>
     </div>
   </footer>
-  
-  <script src="/assets/js/main.js"></script>
-  
+
+  <script src="../assets/js/main.js"></script>
+
 </body>
+
 </html>

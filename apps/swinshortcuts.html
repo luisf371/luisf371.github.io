@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+
+    <title>sWinShortcuts - Desktop Application | tekky.cc</title>
+    <meta name="description"
+        content="Low-level Windows keyboard and mouse remapper with per-application profiles and a WPF front-end. Remap mouse gestures, override keys, and launch apps efficiently.">
+
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/extension.css">
+    <link rel="canonical" href="https://tekky.cc/apps/swinshortcuts.html">
+</head>
+
+<body>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="../" class="nav-brand">tekky.cc</a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="nav-toggle-icon"></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="../#extensions" class="nav-link">Extensions</a></li>
+                <li><a href="../#applications" class="nav-link">Applications</a></li>
+                <li><a href="../blog/" class="nav-link">Blog</a></li>
+                <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank"
+                        rel="noopener noreferrer">GitHub</a></li>
+                <li><a href="../#contact" class="nav-link">Contact</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
+                        <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                        <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="5" />
+                            <line x1="12" y1="1" x2="12" y2="3" />
+                            <line x1="12" y1="21" x2="12" y2="23" />
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                            <line x1="1" y1="12" x2="3" y2="12" />
+                            <line x1="21" y1="12" x2="23" y2="12" />
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="extension-header">
+        <div class="container">
+            <a href="../#applications" class="back-link">Back to Applications</a>
+
+            <div class="extension-header-content">
+                <img src="../assets/images/icons/swinshortcuts.png" alt="sWinShortcuts icon"
+                    class="extension-header-icon">
+
+                <div class="extension-header-info">
+                    <h1 class="extension-title">sWinShortcuts</h1>
+                    <p class="extension-tagline">Low-level Windows remapping & automation</p>
+
+                    <div class="extension-meta">
+                        <span class="tag tag-primary">Utility</span>
+                        <span class="tag">Windows</span>
+                        <span class="tag">C# / WPF</span>
+                        <span class="tag tag-success">Original</span>
+                    </div>
+
+                    <div class="extension-actions">
+                        <a href="https://github.com/[YOURUSERNAME]/sWinShortcuts" class="btn btn-primary"
+                            target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                        <button class="btn btn-secondary" disabled>Download Installer (Coming Soon)</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="extension-content">
+
+        <section class="content-section">
+            <h2 class="section-heading">Overview</h2>
+            <p>
+                sWinShortcuts is a lightweight background service for Windows that provides low-level keyboard and mouse
+                remapping via per-application profiles. It targets power users who want deep control over their input
+                devices without the overhead of heavy automation suites.
+            </p>
+            <p>
+                Whether you want macOS-style navigation on Windows, custom mouse chords, or quick application launchers,
+                sWinShortcuts monitors your active window and applies your custom rules instantly. Built with C# and
+                .NET 8, it uses high-performance low-level hooks for near-zero latency.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-heading">Key Features</h2>
+            <ul class="features-list">
+                <li><strong>Per-App Profiles:</strong> Automatically switch input behaviors based on the active
+                    foreground process.</li>
+                <li><strong>Alt+Mouse Remapping:</strong> Map Alt+Click or drag gestures to any keyboard command (e.g.,
+                    Alt+Right Drag to Ctrl+Wheel).</li>
+                <li><strong>Right-Button Overrides:</strong> Create custom chords using the right mouse button paired
+                    with keyboard keys.</li>
+                <li><strong>Caps Lock Modes:</strong> Disable, toggle, remap, or turn Caps Lock into a "momentary Shift"
+                    key.</li>
+                <li><strong>Windows Launcher Grid:</strong> Use the numpad as a global application launcher with
+                    optional admin elevation.</li>
+                <li><strong>Low-Level Performance:</strong> Built with high-performance hooks for minimal CPU and memory
+                    footprint.</li>
+                <li><strong>Tray Integration:</strong> Runs silently in the system tray with quick access to profile
+                    management.</li>
+                <li><strong>WPF Interface:</strong> A clean, modern management UI built with MVVM patterns.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-heading">Preview</h2>
+            <div class="screenshot-item">
+                <img src="../assets/images/swinshortcuts_hero.png" alt="sWinShortcuts Interface Preview"
+                    style="border-radius: var(--radius-md);">
+                <p class="screenshot-caption">Visualizing the remapping logic and WPF management interface.</p>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <h2 class="section-heading">Technical Specifications</h2>
+            <table class="technical-table">
+                <tr>
+                    <td>Framework</td>
+                    <td>.NET 8.0 Windows (WPF)</td>
+                </tr>
+                <tr>
+                    <td>Hook Mechanisms</td>
+                    <td>WH_KEYBOARD_LL, WH_MOUSE_LL</td>
+                </tr>
+                <tr>
+                    <td>Architecture</td>
+                    <td>Service-oriented (Microsoft.Extensions.Hosting)</td>
+                </tr>
+                <tr>
+                    <td>UI Pattern</td>
+                    <td>MVVM (CommunityToolkit.Mvvm)</td>
+                </tr>
+                <tr>
+                    <td>Storage</td>
+                    <td>INI per-profile files in %APPDATA%</td>
+                </tr>
+                <tr>
+                    <td>Status</td>
+                    <td>Active Development</td>
+                </tr>
+            </table>
+        </section>
+
+        <footer class="extension-footer">
+            <a href="https://github.com/[YOURUSERNAME]/sWinShortcuts" target="_blank" rel="noopener noreferrer">View
+                Source
+                Code</a>
+            <a href="https://github.com/[YOURUSERNAME]/sWinShortcuts/issues" target="_blank"
+                rel="noopener noreferrer">Report Issues</a>
+            <a href="../">← Back to Portfolio</a>
+        </footer>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <ul class="footer-links">
+                    <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank"
+                            rel="noopener noreferrer">GitHub</a></li>
+                    <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
+                    <li><a href="#" class="footer-link">Privacy</a></li>
+                </ul>
+                <p class="footer-copyright">&copy; 2026 tekky.cc. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+
+</body>
+
+</html>

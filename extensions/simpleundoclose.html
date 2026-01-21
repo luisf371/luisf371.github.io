@@ -1,110 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
-  
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+
   <title>SimpleUndoClose - Chrome Extension | tekky.cc</title>
-  <meta name="description" content="Quickly restore recently closed tabs and windows with keyboard shortcuts. Never lose an important tab again.">
-  
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/extension.css">
+  <meta name="description"
+    content="Quickly restore recently closed tabs and windows with keyboard shortcuts. Never lose an important tab again.">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/extension.css">
   <link rel="canonical" href="https://tekky.cc/extensions/simpleundoclose.html">
 </head>
+
 <body>
-  
+
   <nav class="nav">
     <div class="nav-container">
-      <a href="/" class="nav-brand">tekky.cc</a>
+      <a href="../" class="nav-brand">tekky.cc</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="nav-toggle-icon"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/" class="nav-link">Extensions</a></li>
-        <li><a href="/blog/" class="nav-link">Blog</a></li>
-        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="/#contact" class="nav-link">Contact</a></li>
+        <li><a href="../#extensions" class="nav-link">Extensions</a></li>
+        <li><a href="../#applications" class="nav-link">Applications</a></li>
+        <li><a href="../blog/" class="nav-link">Blog</a></li>
+        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank"
+            rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
         <li>
           <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
             <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
             <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="5"/>
-              <line x1="12" y1="1" x2="12" y2="3"/>
-              <line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/>
-              <line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </svg>
           </button>
         </li>
       </ul>
     </div>
   </nav>
-  
+
   <header class="extension-header">
     <div class="container">
       <a href="/" class="back-link">Back to Extensions</a>
-      
+
       <div class="extension-header-content">
-        <img src="/assets/images/icons/simpleundoclose.png" alt="SimpleUndoClose icon" class="extension-header-icon">
-        
+        <img src="../assets/images/icons/simpleundoclose.png" alt="SimpleUndoClose icon" class="extension-header-icon">
+
         <div class="extension-header-info">
           <h1 class="extension-title">SimpleUndoClose</h1>
           <p class="extension-tagline">Never lose a tab again</p>
-          
+
           <div class="extension-meta">
             <span class="tag tag-primary">Productivity</span>
             <span class="tag">Tabs</span>
             <span class="tag">Fork</span>
             <span class="tag">Manifest V3</span>
           </div>
-          
+
           <div class="extension-actions">
-            <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" class="btn btn-primary" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" class="btn btn-primary" target="_blank"
+              rel="noopener noreferrer">View on GitHub</a>
             <button class="btn btn-secondary" disabled>Coming Soon on Chrome Web Store</button>
           </div>
         </div>
       </div>
     </div>
   </header>
-  
+
   <main class="extension-content">
-    
+
     <section class="content-section">
       <h2 class="section-heading">Overview</h2>
       <p>
-        SimpleUndoClose is a fork of the popular "Simple Undo Close" extension that makes it easy to restore recently closed tabs and windows. We've all accidentally closed an important tab or window—this extension ensures you can get it back with just one click or keyboard shortcut.
+        SimpleUndoClose is a fork of the popular "Simple Undo Close" extension that makes it easy to restore recently
+        closed tabs and windows. We've all accidentally closed an important tab or window—this extension ensures you can
+        get it back with just one click or keyboard shortcut.
       </p>
       <p>
-        The extension maintains a session history of your closed tabs and windows, displaying them in a clean popup interface with favicons for easy identification. You can restore individual tabs or entire windows, and the extension supports multi-language localization.
+        The extension maintains a session history of your closed tabs and windows, displaying them in a clean popup
+        interface with favicons for easy identification. You can restore individual tabs or entire windows, and the
+        extension supports multi-language localization.
       </p>
       <p>
-        With keyboard shortcut support (Alt+Z by default, MacCtrl+Z on Mac), recovering closed tabs is faster than ever. The extension is lightweight, fast, and designed to stay out of your way until you need it.
+        With keyboard shortcut support (Alt+Z by default, MacCtrl+Z on Mac), recovering closed tabs is faster than ever.
+        The extension is lightweight, fast, and designed to stay out of your way until you need it.
       </p>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Key Features</h2>
       <ul class="features-list">
         <li><strong>Restore Closed Tabs:</strong> Quickly reopen recently closed tabs with one click</li>
         <li><strong>Restore Windows:</strong> Recover entire closed windows, not just individual tabs</li>
+        <li><strong>Powerful Search:</strong> Quickly find a specific closed tab by typing in the popup search bar</li>
         <li><strong>Keyboard Shortcut:</strong> Use Alt+Z (MacCtrl+Z on Mac) to restore the most recent tab</li>
+        <li><strong>Customizable Experience:</strong> Toggle tab count badge, adjust history limits, choose themes, and
+          modify popup width</li>
         <li><strong>Session History:</strong> View a list of all recently closed tabs and windows</li>
-        <li><strong>Favicon Display:</strong> See website icons for easy visual identification of tabs</li>
-        <li><strong>Multi-Language Support:</strong> Available in multiple languages through i18n</li>
-        <li><strong>Clean Interface:</strong> Minimal, unobtrusive popup design</li>
-        <li><strong>Customizable Shortcut:</strong> Configure your preferred keyboard command via Chrome settings</li>
-        <li><strong>Lightweight & Fast:</strong> No performance impact on your browsing</li>
+        <li><strong>Favicon Display:</strong> See website icons for easy visual identification</li>
+        <li><strong>Privacy Focused:</strong> Your data stays local; the extension only interacts with your history
+          locally</li>
+        <li><strong>Lightweight & Fast:</strong> Built on Manifest V3 with a modern service worker architecture</li>
       </ul>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Screenshots</h2>
       <div class="screenshot-placeholder">
@@ -115,20 +129,21 @@
         </p>
       </div>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Installation</h2>
-      
+
       <div class="installation-methods">
         <div class="installation-method">
           <h3>Option 1: Chrome Web Store (Coming Soon)</h3>
           <p>This extension will be available on the Chrome Web Store soon. Check back for updates!</p>
         </div>
-        
+
         <div class="installation-method">
           <h3>Option 2: Install from Source (Developer Mode)</h3>
           <ol>
-            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose"
+                target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
             <li>Enable <strong>"Developer mode"</strong> using the toggle in the top right corner</li>
             <li>Click <strong>"Load unpacked"</strong></li>
@@ -136,25 +151,29 @@
             <li>The extension icon will appear in your toolbar—click it to see closed tabs</li>
           </ol>
           <p style="margin-top: 1rem;">
-            <strong>Configure Keyboard Shortcut:</strong> Go to <code>chrome://extensions/shortcuts</code> to customize the keyboard command (default: Alt+Z).
+            <strong>Configure Keyboard Shortcut:</strong> Go to <code>chrome://extensions/shortcuts</code> to customize
+            the keyboard command (default: Alt+Z).
           </p>
         </div>
       </div>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">How to Use</h2>
       <p>
-        <strong>1. Click Extension Icon:</strong> Click the SimpleUndoClose icon in your toolbar to see a list of recently closed tabs and windows.
+        <strong>1. Click Extension Icon:</strong> Click the SimpleUndoClose icon in your toolbar to see a list of
+        recently closed tabs and windows.
       </p>
       <p>
-        <strong>2. Use Keyboard Shortcut:</strong> Press Alt+Z (or your custom shortcut) to instantly restore the most recently closed tab.
+        <strong>2. Use Keyboard Shortcut:</strong> Press Alt+Z (or your custom shortcut) to instantly restore the most
+        recently closed tab.
       </p>
       <p>
-        <strong>3. Select from History:</strong> From the popup, click on any closed tab to restore it, or click a window entry to restore all its tabs.
+        <strong>3. Select from History:</strong> From the popup, click on any closed tab to restore it, or click a
+        window entry to restore all its tabs.
       </p>
     </section>
-    
+
     <section class="content-section">
       <h2 class="section-heading">Technical Details</h2>
       <table class="technical-table">
@@ -184,20 +203,23 @@
         </tr>
       </table>
     </section>
-    
+
     <footer class="extension-footer">
-      <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" target="_blank" rel="noopener noreferrer">View Source Code</a>
-      <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose/issues" target="_blank" rel="noopener noreferrer">Report Issues</a>
-      <a href="/">← Back to Portfolio</a>
+      <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" target="_blank" rel="noopener noreferrer">View Source
+        Code</a>
+      <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose/issues" target="_blank"
+        rel="noopener noreferrer">Report Issues</a>
+      <a href="../">← Back to Portfolio</a>
     </footer>
-    
+
   </main>
-  
+
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <ul class="footer-links">
-          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank"
+              rel="noopener noreferrer">GitHub</a></li>
           <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
           <li><a href="#" class="footer-link">Privacy</a></li>
         </ul>
@@ -205,8 +227,9 @@
       </div>
     </div>
   </footer>
-  
-  <script src="/assets/js/main.js"></script>
-  
+
+  <script src="../assets/js/main.js"></script>
+
 </body>
+
 </html>

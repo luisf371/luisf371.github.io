@@ -18,7 +18,7 @@ async function loadBlogPosts() {
   
   try {
     // Fetch posts data
-    const response = await fetch('/blog/posts.json');
+    const response = await fetch('./posts.json');
     if (!response.ok) {
       throw new Error('Failed to load posts');
     }
@@ -60,7 +60,7 @@ async function loadBlogPosts() {
  */
 function createPostCard(post) {
   const card = document.createElement('a');
-  card.href = `/blog/${post.slug}.html`;
+  card.href = `./${post.slug}.html`;
   card.className = 'blog-post-card';
   
   // Add featured class if applicable

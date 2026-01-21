@@ -1,66 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests;">
-  
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+
   <title>Blog | tekky.cc</title>
-  <meta name="description" content="Articles about Chrome extension development, productivity tips, and web development from tekky.cc">
+  <meta name="description"
+    content="Articles about Chrome extension development, productivity tips, and web development from tekky.cc">
   <meta name="keywords" content="chrome extensions, web development, javascript, productivity, blog">
-  
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tekky.cc/blog/">
   <meta property="og:title" content="Blog | tekky.cc">
-  <meta property="og:description" content="Articles about Chrome extension development, productivity tips, and web development">
+  <meta property="og:description"
+    content="Articles about Chrome extension development, productivity tips, and web development">
   <meta property="og:image" content="https://tekky.cc/assets/images/og-image.png">
-  
+
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://tekky.cc/blog/">
   <meta property="twitter:title" content="Blog | tekky.cc">
-  <meta property="twitter:description" content="Articles about Chrome extension development, productivity tips, and web development">
+  <meta property="twitter:description"
+    content="Articles about Chrome extension development, productivity tips, and web development">
   <meta property="twitter:image" content="https://tekky.cc/assets/images/og-image.png">
-  
-  <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  <link rel="stylesheet" href="/assets/css/main.css">
-  <link rel="stylesheet" href="/assets/css/blog.css">
+
+  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="stylesheet" href="../assets/css/main.css">
+  <link rel="stylesheet" href="../assets/css/blog.css">
   <link rel="canonical" href="https://tekky.cc/blog/">
 </head>
+
 <body>
-  
+
   <nav class="nav">
     <div class="nav-container">
-      <a href="/" class="nav-brand">tekky.cc</a>
+      <a href="../" class="nav-brand">tekky.cc</a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="nav-toggle-icon"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/" class="nav-link">Extensions</a></li>
-        <li><a href="/blog/" class="nav-link active">Blog</a></li>
-        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="/#contact" class="nav-link">Contact</a></li>
+        <li><a href="../#extensions" class="nav-link">Extensions</a></li>
+        <li><a href="../#applications" class="nav-link">Applications</a></li>
+        <li><a href="../blog/" class="nav-link active">Blog</a></li>
+        <li><a href="https://github.com/[YOURUSERNAME]" class="nav-link" target="_blank"
+            rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="../#contact" class="nav-link">Contact</a></li>
         <li>
           <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
             <svg class="theme-icon theme-icon-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
             </svg>
             <svg class="theme-icon theme-icon-sun" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="5"/>
-              <line x1="12" y1="1" x2="12" y2="3"/>
-              <line x1="12" y1="21" x2="12" y2="23"/>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-              <line x1="1" y1="12" x2="3" y2="12"/>
-              <line x1="21" y1="12" x2="23" y2="12"/>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              <circle cx="12" cy="12" r="5" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
             </svg>
           </button>
         </li>
       </ul>
     </div>
   </nav>
-  
+
   <main>
     <!-- Blog Header -->
     <header class="blog-header">
@@ -71,11 +79,11 @@
         </p>
       </div>
     </header>
-    
+
     <!-- Blog Posts -->
     <section class="blog-posts">
       <div class="container">
-        
+
         <!-- Posts will be dynamically loaded here -->
         <div id="blog-posts-container" class="blog-posts-grid">
           <!-- Loading state -->
@@ -83,25 +91,26 @@
             <p style="color: var(--text-tertiary);">Loading posts...</p>
           </div>
         </div>
-        
+
         <!-- Empty state (hidden by default, shown if no posts) -->
         <div id="blog-empty" class="blog-empty" style="display: none;">
           <div class="blog-empty-icon">📝</div>
           <p class="blog-empty-text">No posts yet. Check back soon!</p>
           <div style="margin-top: 2rem;">
-            <a href="/" class="btn btn-primary">View Extensions</a>
+            <a href="../" class="btn btn-primary">View Extensions</a>
           </div>
         </div>
-        
+
       </div>
     </section>
   </main>
-  
+
   <footer class="footer">
     <div class="container">
       <div class="footer-content">
         <ul class="footer-links">
-          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+          <li><a href="https://github.com/[YOURUSERNAME]" class="footer-link" target="_blank"
+              rel="noopener noreferrer">GitHub</a></li>
           <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
           <li><a href="#" class="footer-link">Privacy</a></li>
         </ul>
@@ -109,9 +118,10 @@
       </div>
     </div>
   </footer>
-  
-  <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/blog.js"></script>
-  
+
+  <script src="../assets/js/main.js"></script>
+  <script src="../assets/js/blog.js"></script>
+
 </body>
+
 </html>
