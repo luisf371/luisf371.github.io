@@ -1,0 +1,9 @@
+services:
+  portfolio:
+    image: nginx:alpine
+    container_name: tekky-portfolio
+    volumes:
+      - .:/usr/share/nginx/html:ro
+    ports:
+      - "8000:80"
+    restart: unless-stopped
