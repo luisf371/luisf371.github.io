@@ -53,10 +53,10 @@ Create a professional portfolio website at **tekky.cc** to showcase 6 Chrome ext
 ### **User's Chrome Extensions**
 Located at: `D:\Chrome Extensions\`
 
-1. **bookarmk** (Neater Bookmarks)
+1. **sNeatBookmarks** (Neater Bookmarks)
    - Type: Fork
    - Description: Tree-style bookmark management
-   - Version: 0.9.7.1
+   - Version: 1.0.0
    - Manifest: V3
 
 2. **sBookmarkCleaner**
@@ -65,28 +65,28 @@ Located at: `D:\Chrome Extensions\`
    - Version: 1.0.0
    - Manifest: V3
 
-3. **sGesture**
+3. **sGestures**
    - Type: Original
    - Description: Mouse gesture navigation
-   - Version: 1.1
+   - Version: 1.0.0
    - Manifest: V3
 
-4. **SimpleUndoClose**
+4. **sUndoClose**
    - Type: Fork
    - Description: Restore closed tabs/windows
-   - Version: 1.3.11
+   - Version: 1.0.0
    - Manifest: V3
 
 5. **sSummarizer**
    - Type: Original
    - Description: AI-powered web/YouTube summarization
-   - Version: 1.11
+   - Version: 1.0.0
    - Manifest: V3
 
 6. **sTabControl**
    - Type: Original
    - Description: Advanced tab management
-   - Version: 1.0
+   - Version: 1.0.0
    - Manifest: V3
 
 ### **User Preferences (Confirmed)**
@@ -266,10 +266,10 @@ Content-Security-Policy: [full CSP string]
 
 **Created:**
 - ✅ `assets/css/extension.css` (300+ lines)
-- ✅ `extensions/bookarmk.html` (350+ lines)
+- ✅ `extensions/sneatbookmarks.html` (350+ lines)
 - ✅ `extensions/sbookmarkcleaner.html` (350+ lines)
-- ✅ `extensions/sgesture.html` (350+ lines)
-- ✅ `extensions/simpleundoclose.html` (350+ lines)
+- ✅ `extensions/sgestures.html` (350+ lines)
+- ✅ `extensions/sundoclose.html` (350+ lines)
 - ✅ `extensions/ssummarizer.html` (400+ lines)
 - ✅ `extensions/stabcontrol.html` (350+ lines)
 
@@ -318,7 +318,7 @@ Content-Security-Policy: [full CSP string]
 - Feature lists (8-12 features each)
 - Use cases and "How to Use" sections
 - Specific version numbers and permission requirements
-- Attribution for forks (bookarmk, SimpleUndoClose)
+- Attribution for forks (sNeatBookmarks, sUndoClose)
 
 ### **Phase 5: Blog & 404 Pages** ✅ Complete
 **Duration:** Day 1 (Completed)
@@ -384,15 +384,15 @@ Content-Security-Policy: [full CSP string]
 **Duration:** Day 1 (Completed)
 
 **Extension Icons Copied:**
-- ✅ bookarmk.png (from `D:\Chrome Extensions\bookarmk\icon128.png`)
+- ✅ sneatbookmarks.png (from `D:\Chrome Extensions\sNeatBookmarks\icon128.png`)
 - ✅ sbookmarkcleaner.png (from `D:\Chrome Extensions\sBookmarkCleaner\icons\icon128.png`)
-- ✅ sgesture.png (temporary - copied from bookarmk as placeholder)
-- ✅ simpleundoclose.png (from `D:\Chrome Extensions\SimpleUndoClose\icon-128.png`)
+- ✅ sgestures.png (temporary - copied from sNeatBookmarks as placeholder)
+- ✅ sundoclose.png (from `D:\Chrome Extensions\SimpleUndoClose\icon-128.png`)
 - ✅ ssummarizer.png (from `D:\Chrome Extensions\sSummarizer\logo.png`)
 - ✅ stabcontrol.png (from `D:\Chrome Extensions\sTabControl\stack.png`)
 
 **Additional Assets:**
-- ✅ sgesture.svg (SVG placeholder created)
+- ✅ sgestures.svg (SVG placeholder created)
 - ✅ favicon-32x32.png (temporary placeholder)
 - ✅ .gitkeep in screenshots directory
 - ✅ README.txt files with instructions for missing assets
@@ -462,10 +462,10 @@ git commit -m "Initial commit: tekky.cc portfolio with 6 Chrome extensions"
 
 #### HTML Pages (8)
 9. `index.html` - Homepage
-10. `extensions/bookarmk.html` - Neater Bookmarks
+10. `extensions/sneatbookmarks.html` - Neater Bookmarks
 11. `extensions/sbookmarkcleaner.html` - sBookmarkCleaner
-12. `extensions/sgesture.html` - sGesture
-13. `extensions/simpleundoclose.html` - SimpleUndoClose
+12. `extensions/sgestures.html` - sGesture
+13. `extensions/sundoclose.html` - SimpleUndoClose
 14. `extensions/ssummarizer.html` - sSummarizer
 15. `extensions/stabcontrol.html` - sTabControl
 16. `blog/index.html` - Blog placeholder
@@ -480,14 +480,14 @@ git commit -m "Initial commit: tekky.cc portfolio with 6 Chrome extensions"
 21. `assets/js/main.js` - Site interactions
 
 #### Image Assets (13)
-22. `assets/images/icons/bookarmk.png`
+22. `assets/images/icons/sneatbookmarks.png`
 23. `assets/images/icons/sbookmarkcleaner.png`
-24. `assets/images/icons/sgesture.png`
-25. `assets/images/icons/simpleundoclose.png`
+24. `assets/images/icons/sgestures.png`
+25. `assets/images/icons/sundoclose.png`
 26. `assets/images/icons/ssummarizer.png`
 27. `assets/images/icons/stabcontrol.png`
-28. `assets/images/icons/sgesture.svg` - SVG placeholder
-29. `assets/images/icons/sgesture.png.placeholder` - Note file
+28. `assets/images/icons/sgestures.svg` - SVG placeholder
+29. `assets/images/icons/sgestures.png.placeholder` - Note file
 30. `assets/images/icons/README.txt` - Instructions
 31. `assets/images/favicon-32x32.png` - Temporary favicon
 32. `assets/images/FAVICON_README.txt` - Instructions
@@ -989,24 +989,24 @@ Type: CNAME | Name: www | Content: tekky.cc | Proxy: ON
 - **Action:** Find and replace with actual GitHub username
 - **Files:**
   - index.html
-  - All 6 extension pages (bookarmk.html, etc.)
+  - All 6 extension pages (sneatbookmarks.html, etc.)
   - blog/index.html
   - 404.html
   - README.md
   - DEPLOYMENT_GUIDE.md
 
 **2. sGesture Icon** 🟡 MEDIUM
-- **Current:** Using bookarmk.png as temporary placeholder
+- **Current:** Using sneatbookmarks.png as temporary placeholder
 - **Issue:** sGesture extension doesn't have icon in source directory
 - **Action:** Create actual icon (128x128 PNG) or convert SVG placeholder
-- **Files affected:** assets/images/icons/sgesture.png
+- **Files affected:** assets/images/icons/sgestures.png
 - **Alternatives:**
-  - Use sgesture.svg and convert to PNG
+  - Use sgestures.svg and convert to PNG
   - Design custom icon
   - Extract from extension if available elsewhere
 
 **3. Favicons** 🟡 MEDIUM
-- **Current:** Temporary placeholder (bookarmk icon)
+- **Current:** Temporary placeholder (sNeatBookmarks icon)
 - **Action:** Create proper favicon set:
   - favicon.ico (16x16, 32x32 multi-size)
   - favicon-16x16.png
@@ -1034,7 +1034,7 @@ Type: CNAME | Name: www | Content: tekky.cc | Proxy: ON
 
 ### **Temporary Files to Remove** (Before Launch)
 
-- `assets/images/icons/sgesture.png.placeholder` - Note file
+- `assets/images/icons/sgestures.png.placeholder` - Note file
 - `assets/images/FAVICON_README.txt` - Instructions
 - `assets/images/og-image.png.placeholder` - Note file
 - `assets/images/icons/README.txt` - Instructions (optional keep)
@@ -1401,7 +1401,7 @@ When extensions are published to Chrome Web Store:
 
 3. **All 11 HTML pages** - Navigation updated with theme toggle button
    - index.html
-   - 6 extension pages (bookarmk.html, sbookmarkcleaner.html, sgesture.html, simpleundoclose.html, ssummarizer.html, stabcontrol.html)
+   - 6 extension pages (sneatbookmarks.html, sbookmarkcleaner.html, sgestures.html, sundoclose.html, ssummarizer.html, stabcontrol.html)
    - 2 blog pages (index.html, welcome-to-tekky-blog.html)
    - blog/post-template.html
    - 404.html

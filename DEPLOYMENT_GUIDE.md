@@ -20,10 +20,10 @@
 
 ### HTML Pages (8)
 - ✅ index.html (homepage with 6 extension cards)
-- ✅ extensions/bookarmk.html
+- ✅ extensions/sneatbookmarks.html
 - ✅ extensions/sbookmarkcleaner.html
-- ✅ extensions/sgesture.html
-- ✅ extensions/simpleundoclose.html
+- ✅ extensions/sgestures.html
+- ✅ extensions/sundoclose.html
 - ✅ extensions/ssummarizer.html
 - ✅ extensions/stabcontrol.html
 - ✅ blog/index.html (placeholder)
@@ -32,13 +32,13 @@
 - ✅ assets/js/main.js (navigation, mobile menu, email obfuscation)
 
 ### Assets (11)
-- ✅ bookarmk.png (copied from source)
+- ✅ sneatbookmarks.png (copied from source)
 - ✅ sbookmarkcleaner.png (copied from source)
-- ✅ sgesture.png (temporary placeholder)
-- ✅ simpleundoclose.png (copied from source)
+- ✅ sgestures.png (temporary placeholder)
+- ✅ sundoclose.png (copied from source)
 - ✅ ssummarizer.png (copied from source)
 - ✅ stabcontrol.png (copied from source)
-- ✅ sgesture.svg (SVG placeholder)
+- ✅ sgestures.svg (SVG placeholder)
 - ✅ favicon-32x32.png (temporary)
 - ✅ screenshots/.gitkeep
 - ✅ og-image placeholder notes
@@ -61,7 +61,7 @@
 
 **sGesture Icon:**
 - Replace temporary placeholder with actual icon
-- Convert sgesture.svg to PNG if needed
+- Convert sgestures.svg to PNG if needed
 
 **Email Setup:**
 - Set up contact@tekky.cc email address (or use your existing email)
@@ -212,10 +212,10 @@ D:\Big Projects\Github Pages\
 │       └── screenshots/       📸 Coming soon
 │
 ├── extensions/
-│   ├── bookarmk.html          ✅ Complete
+│   ├── sneatbookmarks.html          ✅ Complete
 │   ├── sbookmarkcleaner.html  ✅ Complete
-│   ├── sgesture.html          ✅ Complete
-│   ├── simpleundoclose.html   ✅ Complete
+│   ├── sgestures.html          ✅ Complete
+│   ├── sundoclose.html   ✅ Complete
 │   ├── ssummarizer.html       ✅ Complete
 │   └── stabcontrol.html       ✅ Complete
 │
@@ -246,7 +246,7 @@ D:\Big Projects\Github Pages\
 
 ## 🐛 Known Issues / Notes
 
-1. **sGesture Icon:** Using temporary placeholder (bookarmk icon). Replace with actual icon before launch.
+1. **sGestures Icon:** Using temporary placeholder (sNeatBookmarks icon). Replace with actual icon before launch.
 2. **Favicons:** Using temporary files. Create proper favicon set.
 3. **OG Image:** Placeholder notes only. Create 1200x630 social sharing image.
 4. **Screenshots:** All extension pages have placeholder sections. Add real screenshots when available.

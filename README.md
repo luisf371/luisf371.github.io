@@ -6,10 +6,10 @@ Portfolio website showcasing Chrome extensions for productivity and enhanced bro
 
 ## 📦 Featured Extensions
 
-1. **Neater Bookmarks** - Elegant tree-style bookmark management
+1. **sNeatBookmarks** - Elegant tree-style bookmark management
 2. **sBookmarkCleaner** - Find and remove broken bookmarks and duplicates
-3. **sGesture** - Navigate with simple mouse gestures
-4. **SimpleUndoClose** - Restore recently closed tabs and windows
+3. **sGestures** - Navigate with simple mouse gestures
+4. **sUndoClose** - Restore recently closed tabs and windows
 5. **sSummarizer** - AI-powered web content summarization
 6. **sTabControl** - Advanced tab management for power users
 

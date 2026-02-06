@@ -7,7 +7,7 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://tekky.cc/extensions/bookarmk.html</loc>
+    <loc>https://tekky.cc/extensions/sneatbookmarks.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -17,12 +17,12 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tekky.cc/extensions/sgesture.html</loc>
+    <loc>https://tekky.cc/extensions/sgestures.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://tekky.cc/extensions/simpleundoclose.html</loc>
+    <loc>https://tekky.cc/extensions/sundoclose.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

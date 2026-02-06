@@ -49,7 +49,7 @@ http-server -p 8000
 Your HTML files use **absolute paths** like:
 ```html
 <link rel="stylesheet" href="/assets/css/main.css">
-<img src="/assets/images/icons/bookarmk.png">
+<img src="/assets/images/icons/sneatbookmarks.png">
 ```
 
 The leading `/` means "root of the web server", which doesn't exist when opening via `file://` protocol.

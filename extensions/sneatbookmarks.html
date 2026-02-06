@@ -7,18 +7,19 @@
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
 
-  <title>SimpleUndoClose - Chrome Extension | tekky.cc</title>
+  <title>sNeatBookmarks - Chrome Extension | tekky.cc</title>
   <meta name="description"
-    content="Quickly restore recently closed tabs and windows with keyboard shortcuts. Never lose an important tab again.">
+    content="Elegant tree-style bookmark management with a clean popup interface, custom themes, and enhanced user controls. Modernized fork of Neat Bookmarks.">
 
   <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/extension.css">
-  <link rel="canonical" href="https://tekky.cc/extensions/simpleundoclose.html">
+  <link rel="canonical" href="https://tekky.cc/extensions/sneatbookmarks.html">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav class="nav">
     <div class="nav-container">
       <a href="../" class="nav-brand">tekky.cc</a>
@@ -54,26 +55,27 @@
     </div>
   </nav>
 
+  <!-- Extension Header -->
   <header class="extension-header">
     <div class="container">
       <a href="/" class="back-link">Back to Extensions</a>
 
       <div class="extension-header-content">
-        <img src="../assets/images/icons/simpleundoclose.png" alt="SimpleUndoClose icon" class="extension-header-icon">
+        <img src="../assets/images/icons/sneatbookmarks.png" alt="sNeatBookmarks icon" class="extension-header-icon">
 
         <div class="extension-header-info">
-          <h1 class="extension-title">SimpleUndoClose</h1>
-          <p class="extension-tagline">Never lose a tab again</p>
+          <h1 class="extension-title">sNeatBookmarks</h1>
+          <p class="extension-tagline">Streamlined tree-style bookmark management</p>
 
           <div class="extension-meta">
             <span class="tag tag-primary">Productivity</span>
-            <span class="tag">Tabs</span>
+            <span class="tag">Bookmarks</span>
             <span class="tag">Fork</span>
             <span class="tag">Manifest V3</span>
           </div>
 
           <div class="extension-actions">
-            <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" class="btn btn-primary" target="_blank"
+            <a href="https://github.com/[YOURUSERNAME]/sNeatBookmarks" class="btn btn-primary" target="_blank"
               rel="noopener noreferrer">View on GitHub</a>
             <button class="btn btn-secondary" disabled>Coming Soon on Chrome Web Store</button>
           </div>
@@ -82,54 +84,60 @@
     </div>
   </header>
 
+  <!-- Extension Content -->
   <main class="extension-content">
 
+    <!-- Overview Section -->
     <section class="content-section">
       <h2 class="section-heading">Overview</h2>
       <p>
-        SimpleUndoClose is a fork of the popular "Simple Undo Close" extension that makes it easy to restore recently
-        closed tabs and windows. We've all accidentally closed an important tab or window—this extension ensures you can
-        get it back with just one click or keyboard shortcut.
+        sNeatBookmarks is a refined fork of the popular <a href="https://github.com/cheeaun/neat-bookmarks"
+          target="_blank" rel="noopener noreferrer">Neat Bookmarks</a> extension by Lim Chee Aun. It provides a clean
+        and efficient way to navigate your Chrome bookmarks through an elegant tree-style popup interface.
       </p>
       <p>
-        The extension maintains a session history of your closed tabs and windows, displaying them in a clean popup
-        interface with favicons for easy identification. You can restore individual tabs or entire windows, and the
-        extension supports multi-language localization.
+        The extension features a resizable popup window that displays your bookmarks in a hierarchical tree structure,
+        making it easy to browse through folders and quickly access your saved pages. With built-in search functionality
+        and keyboard shortcuts, managing your bookmarks has never been more efficient.
       </p>
       <p>
-        With keyboard shortcut support (Alt+Z by default, MacCtrl+Z on Mac), recovering closed tabs is faster than ever.
-        The extension is lightweight, fast, and designed to stay out of your way until you need it.
+        This fork maintains the minimal, fast performance of the original while ensuring compatibility with Manifest V3
+        and modern Chrome standards.
       </p>
     </section>
 
+    <!-- Features Section -->
     <section class="content-section">
       <h2 class="section-heading">Key Features</h2>
       <ul class="features-list">
-        <li><strong>Restore Closed Tabs:</strong> Quickly reopen recently closed tabs with one click</li>
-        <li><strong>Restore Windows:</strong> Recover entire closed windows, not just individual tabs</li>
-        <li><strong>Powerful Search:</strong> Quickly find a specific closed tab by typing in the popup search bar</li>
-        <li><strong>Keyboard Shortcut:</strong> Use Alt+Z (MacCtrl+Z on Mac) to restore the most recent tab</li>
-        <li><strong>Customizable Experience:</strong> Toggle tab count badge, adjust history limits, choose themes, and
-          modify popup width</li>
-        <li><strong>Session History:</strong> View a list of all recently closed tabs and windows</li>
+        <li><strong>Tree-Style Navigation:</strong> Browse your bookmarks in a familiar, organized folder structure</li>
+        <li><strong>Instant Search:</strong> Quickly locate bookmarks and folders with a responsive search bar</li>
+        <li><strong>Custom Themes:</strong> Choose from presets like Light, Modern, Dark, Neon, and Vintage, or apply
+          custom CSS</li>
+        <li><strong>State Persistence:</strong> Automatically remembers your scroll position and open folders across
+          sessions</li>
+        <li><strong>Batch Opening:</strong> Open all bookmarks in a folder simultaneously with confirmation prompts</li>
+        <li><strong>In-Place Editing:</strong> Edit titles, URLs, and manage folders directly within the popup interface
+        </li>
+        <li><strong>Omnibox Integration:</strong> Type * in the address bar to search bookmarks directly</li>
         <li><strong>Favicon Display:</strong> See website icons for easy visual identification</li>
-        <li><strong>Privacy Focused:</strong> Your data stays local; the extension only interacts with your history
-          locally</li>
-        <li><strong>Lightweight & Fast:</strong> Built on Manifest V3 with a modern service worker architecture</li>
+        <li><strong>Manifest V3:</strong> Modern security and performance standards with service worker support</li>
       </ul>
     </section>
 
+    <!-- Screenshots Section -->
     <section class="content-section">
       <h2 class="section-heading">Screenshots</h2>
       <div class="screenshot-placeholder">
         <div class="screenshot-placeholder-icon">📸</div>
         <h3 class="screenshot-placeholder-title">Screenshots Coming Soon</h3>
         <p class="screenshot-placeholder-text">
-          Preview images will be added shortly to showcase the popup interface and session history.
+          Preview images will be added shortly to showcase the extension's interface and features.
         </p>
       </div>
     </section>
 
+    <!-- Installation Section -->
     <section class="content-section">
       <h2 class="section-heading">Installation</h2>
 
@@ -142,44 +150,66 @@
         <div class="installation-method">
           <h3>Option 2: Install from Source (Developer Mode)</h3>
           <ol>
-            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose"
+            <li>Download or clone the repository from <a href="https://github.com/[YOURUSERNAME]/sNeatBookmarks"
                 target="_blank" rel="noopener noreferrer">GitHub</a></li>
             <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
             <li>Enable <strong>"Developer mode"</strong> using the toggle in the top right corner</li>
             <li>Click <strong>"Load unpacked"</strong></li>
             <li>Select the directory where you downloaded/cloned the extension</li>
-            <li>The extension icon will appear in your toolbar—click it to see closed tabs</li>
+            <li>The extension will now appear in your toolbar and is ready to use!</li>
           </ol>
           <p style="margin-top: 1rem;">
-            <strong>Configure Keyboard Shortcut:</strong> Go to <code>chrome://extensions/shortcuts</code> to customize
-            the keyboard command (default: Alt+Z).
+            <strong>Tip:</strong> You can configure a keyboard shortcut by going to
+            <code>chrome://extensions/shortcuts</code> and setting a command for "sNeatBookmarks".
           </p>
         </div>
       </div>
     </section>
 
-    <section class="content-section">
-      <h2 class="section-heading">How to Use</h2>
-      <p>
-        <strong>1. Click Extension Icon:</strong> Click the SimpleUndoClose icon in your toolbar to see a list of
-        recently closed tabs and windows.
-      </p>
-      <p>
-        <strong>2. Use Keyboard Shortcut:</strong> Press Alt+Z (or your custom shortcut) to instantly restore the most
-        recently closed tab.
-      </p>
-      <p>
-        <strong>3. Select from History:</strong> From the popup, click on any closed tab to restore it, or click a
-        window entry to restore all its tabs.
-      </p>
+    <section class="content-section" id="privacy-policy">
+      <h2 class="section-heading">Privacy Policy</h2>
+      <div class="privacy-grid">
+        <div class="privacy-card">
+          <h3><span class="privacy-icon">🛡️</span> Data Collection</h3>
+          <p>sNeatBookmarks does <strong>not</strong> collect, store, or transmit any personal data.</p>
+        </div>
+
+        <div class="privacy-card">
+          <h3><span class="privacy-icon">💾</span> Storage</h3>
+          <p>
+            Theme preferences and UI state are stored using Chrome's sync storage API. This data:
+          </p>
+          <ul>
+            <li>Never leaves your browser/Google account</li>
+            <li>Is only used for interface preferences</li>
+            <li>Can be cleared by uninstalling</li>
+          </ul>
+        </div>
+
+        <div class="privacy-card">
+          <h3><span class="privacy-icon">🔒</span> Permissions</h3>
+          <ul>
+            <li><strong>bookmarks:</strong> Display tree-style interface</li>
+            <li><strong>tabs:</strong> Open bookmarks</li>
+            <li><strong>favicon:</strong> Display website icons</li>
+            <li><strong>storage:</strong> Save settings and themes</li>
+          </ul>
+        </div>
+
+        <div class="privacy-card">
+          <h3><span class="privacy-icon">🚫</span> Third Parties</h3>
+          <p>No third-party services, analytics, or tracking of any kind.</p>
+        </div>
+      </div>
     </section>
 
+    <!-- Technical Details Section -->
     <section class="content-section">
       <h2 class="section-heading">Technical Details</h2>
       <table class="technical-table">
         <tr>
           <td>Version</td>
-          <td>1.3.11</td>
+          <td>1.0.0</td>
         </tr>
         <tr>
           <td>Manifest Version</td>
@@ -187,33 +217,36 @@
         </tr>
         <tr>
           <td>Permissions</td>
-          <td>tabs, favicon, storage, history</td>
+          <td>bookmarks, tabs, favicon, storage</td>
         </tr>
         <tr>
           <td>Type</td>
-          <td>Fork (based on Simple Undo Close)</td>
+          <td>Fork (based on Neat Bookmarks by Lim Chee Aun)</td>
         </tr>
         <tr>
-          <td>Default Shortcut</td>
-          <td>Alt+Z (Windows/Linux), MacCtrl+Z (Mac)</td>
+          <td>Original Project</td>
+          <td><a href="https://github.com/cheeaun/neat-bookmarks" target="_blank" rel="noopener noreferrer">Neat
+              Bookmarks</a></td>
         </tr>
         <tr>
-          <td>Status</td>
-          <td>Active Development</td>
+          <td>License</td>
+          <td>MIT</td>
         </tr>
       </table>
     </section>
 
+    <!-- Links Footer -->
     <footer class="extension-footer">
-      <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose" target="_blank" rel="noopener noreferrer">View Source
+      <a href="https://github.com/[YOURUSERNAME]/sNeatBookmarks" target="_blank" rel="noopener noreferrer">View Source
         Code</a>
-      <a href="https://github.com/[YOURUSERNAME]/SimpleUndoClose/issues" target="_blank"
-        rel="noopener noreferrer">Report Issues</a>
+      <a href="https://github.com/[YOURUSERNAME]/sNeatBookmarks/issues" target="_blank" rel="noopener noreferrer">Report
+        Issues</a>
       <a href="../">← Back to Portfolio</a>
     </footer>
 
   </main>
 
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
       <div class="footer-content">

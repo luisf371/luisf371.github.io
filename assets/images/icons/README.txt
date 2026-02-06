@@ -1,1 +1,1 @@
-Icon placeholder created. For production, convert sgesture.svg to PNG or use actual icon.
+Icon placeholder created. For production, convert sgestures.svg to PNG or use actual icon.
