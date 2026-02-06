@@ -74,7 +74,7 @@ This portfolio website code is open source. Individual Chrome extensions have th
 
 ## 📧 Contact
 
-- **GitHub:** [https://github.com/[YOURUSERNAME]](https://github.com/[YOURUSERNAME])
+- **GitHub:** [https://github.com/luisf371](https://github.com/luisf371)
 - **Email:** contact [at] tekky [dot] cc
 
 ---

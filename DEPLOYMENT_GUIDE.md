@@ -51,7 +51,7 @@
 ### 1. Replace Placeholders (Before Launch)
 
 **GitHub Username:**
-- Find and replace `[YOURUSERNAME]` throughout all files with your actual GitHub username
+- Find and replace `luisf371` throughout all files with your actual GitHub username
 - Files affected: All HTML files (14 files)
 
 **Favicon & OG Image:**
@@ -71,10 +71,10 @@
 
 ```bash
 # Option 1: Using GitHub CLI
-gh repo create [YOURUSERNAME].github.io --public --source=. --remote=origin
+gh repo create luisf371.github.io --public --source=. --remote=origin
 
 # Option 2: Manual (after creating repo on github.com)
-git remote add origin https://github.com/[YOURUSERNAME]/[YOURUSERNAME].github.io.git
+git remote add origin https://github.com/luisf371/luisf371.github.io.git
 ```
 
 ### 3. Initial Git Commit
@@ -97,7 +97,7 @@ git push -u origin main
 2. Source: Deploy from branch `main` / root
 3. Custom domain: `tekky.cc`
 4. Wait for deployment (2-3 minutes)
-5. Verify at: https://[YOURUSERNAME].github.io
+5. Verify at: https://luisf371.github.io
 
 ### 5. Configure Cloudflare DNS
 
@@ -250,7 +250,7 @@ D:\Big Projects\Github Pages\
 2. **Favicons:** Using temporary files. Create proper favicon set.
 3. **OG Image:** Placeholder notes only. Create 1200x630 social sharing image.
 4. **Screenshots:** All extension pages have placeholder sections. Add real screenshots when available.
-5. **GitHub Username:** All instances of `[YOURUSERNAME]` need to be replaced.
+5. **GitHub Username:** All instances of `luisf371` need to be replaced.
 
 ---
 

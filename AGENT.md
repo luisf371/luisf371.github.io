@@ -96,7 +96,7 @@ Located at: `D:\Chrome Extensions\`
 - ✅ Downloads: Link to Chrome Web Store (when published)
 - ✅ Design: Modern minimal (Vercel/Linear style)
 - ✅ Analytics: Privacy-focused (Cloudflare Web Analytics)
-- ✅ GitHub Username: Placeholder `[YOURUSERNAME]` (to be replaced)
+- ✅ GitHub Username: Placeholder `luisf371` (to be replaced)
 - ✅ Extension Status: All in development (Coming Soon badges)
 - ✅ Hero Text: Use proposed professional text
 - ✅ Contact: GitHub + Email (obfuscated)
@@ -845,32 +845,32 @@ Content-Security-Policy: [full CSP string]
 ### **Step 1: Replace Placeholders** (5-10 minutes)
 
 **Find and Replace:**
-- Search: `[YOURUSERNAME]`
+- Search: `luisf371`
 - Replace: Your actual GitHub username
 - Files affected: All 14 HTML files + README.md
 
 **Manual Replacement Required:**
 - Extension: All HTML pages (14 files)
-- Pattern: `https://github.com/[YOURUSERNAME]`
+- Pattern: `https://github.com/luisf371`
 - Location: Navigation links, footer, extension page links
 
 ### **Step 2: Create GitHub Repository** (2-5 minutes)
 
 **Option A: GitHub CLI**
 ```bash
-gh repo create [YOURUSERNAME].github.io --public --source=. --remote=origin
+gh repo create luisf371.github.io --public --source=. --remote=origin
 git push -u origin main
 ```
 
 **Option B: Manual**
 1. Go to https://github.com/new
-2. Repository name: `[YOURUSERNAME].github.io`
+2. Repository name: `luisf371.github.io`
 3. Visibility: Public
 4. Don't initialize with README/gitignore
 5. Create repository
 6. Run commands:
 ```bash
-git remote add origin https://github.com/[YOURUSERNAME]/[YOURUSERNAME].github.io.git
+git remote add origin https://github.com/luisf371/luisf371.github.io.git
 git branch -M main
 git push -u origin main
 ```
@@ -883,7 +883,7 @@ git push -u origin main
 4. Custom domain: `tekky.cc`
 5. Click "Save"
 6. Wait 2-3 minutes for deployment
-7. Verify at: `https://[YOURUSERNAME].github.io`
+7. Verify at: `https://luisf371.github.io`
 
 ### **Step 4: Configure Cloudflare DNS** (5 minutes)
 
@@ -985,7 +985,7 @@ Type: CNAME | Name: www | Content: tekky.cc | Proxy: ON
 ### **Placeholder Replacements Needed**
 
 **1. GitHub Username** 🔴 CRITICAL
-- **Current:** `[YOURUSERNAME]` in 15 files
+- **Current:** `luisf371` in 15 files
 - **Action:** Find and replace with actual GitHub username
 - **Files:**
   - index.html
@@ -1073,7 +1073,7 @@ When extensions are published to Chrome Web Store:
 
 ### **Before Launch** (High Priority)
 
-- [ ] Replace `[YOURUSERNAME]` placeholder (CRITICAL)
+- [ ] Replace `luisf371` placeholder (CRITICAL)
 - [ ] Create proper favicon set
 - [ ] Design OG image for social sharing
 - [ ] Replace sGesture icon placeholder
@@ -1880,7 +1880,7 @@ Sun icon now properly displays as ☀️:
 ## 🎯 Deployment Checklist (Updated)
 
 **Pre-Deployment Verification:**
-- [x] Replace `[YOURUSERNAME]` placeholder
+- [x] Replace `luisf371` placeholder
 - [x] Test light mode layout
 - [x] Test dark mode layout
 - [x] Verify theme toggle on all pages
