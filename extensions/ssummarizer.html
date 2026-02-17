@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
 
   <title>sSummarizer - Chrome Extension | tekky.cc</title>
   <meta name="description"
@@ -128,13 +128,13 @@
       <p>
         sSummarizer works with any OpenAI-compatible API endpoint:
       </p>
-      <ul style="margin-left: 2rem; color: var(--text-secondary);">
+      <ul class="list-secondary">
         <li><strong>OpenAI:</strong> GPT-3.5-Turbo, GPT-4, GPT-4-Turbo</li>
         <li><strong>Anthropic:</strong> Claude models via compatible endpoints</li>
         <li><strong>Custom APIs:</strong> Any service that implements the OpenAI chat completions format</li>
         <li><strong>Local Models:</strong> Self-hosted AI models with compatible APIs</li>
       </ul>
-      <p style="margin-top: 1.5rem;">
+      <p class="mt-6">
         Configure your API endpoint, key, and model in the extension options page. The extension includes a connection
         tester to verify your settings work correctly.
       </p>

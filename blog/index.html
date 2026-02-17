@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
+    content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
 
   <title>Blog | tekky.cc</title>
   <meta name="description"
@@ -87,16 +87,16 @@
         <!-- Posts will be dynamically loaded here -->
         <div id="blog-posts-container" class="blog-posts-grid">
           <!-- Loading state -->
-          <div class="blog-post-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
-            <p style="color: var(--text-tertiary);">Loading posts...</p>
+          <div class="blog-post-card blog-loading-card">
+            <p class="blog-error-message">Loading posts...</p>
           </div>
         </div>
 
         <!-- Empty state (hidden by default, shown if no posts) -->
-        <div id="blog-empty" class="blog-empty" style="display: none;">
+        <div id="blog-empty" class="blog-empty hidden">
           <div class="blog-empty-icon">📝</div>
           <p class="blog-empty-text">No posts yet. Check back soon!</p>
-          <div style="margin-top: 2rem;">
+          <div class="blog-empty-action">
             <a href="../" class="btn btn-primary">View Extensions</a>
           </div>
         </div>

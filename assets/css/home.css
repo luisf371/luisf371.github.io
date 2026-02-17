@@ -50,6 +50,11 @@
   padding: var(--space-16) 0;
 }
 
+.section-secondary {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+}
+
 .section-title {
   font-size: var(--text-3xl);
   font-weight: 700;

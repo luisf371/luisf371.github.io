@@ -48,8 +48,8 @@ async function loadBlogPosts() {
   } catch (error) {
     console.error('Error loading blog posts:', error);
     container.innerHTML = `
-      <div class="blog-post-card" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
-        <p style="color: var(--text-tertiary);">Failed to load posts. Please try again later.</p>
+      <div class="blog-post-card blog-loading-card">
+        <p class="blog-error-message">Failed to load posts. Please try again later.</p>
       </div>
     `;
   }

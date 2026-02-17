@@ -422,3 +422,28 @@
   font-size: var(--text-xl);
   color: var(--text-tertiary);
 }
+
+/* ============================================
+   Helper Classes for Dynamic Content
+   ============================================ */
+
+.blog-loading-card {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: var(--space-12);
+}
+
+.blog-error-message {
+  color: var(--text-tertiary);
+}
+
+.blog-empty-action {
+  margin-top: var(--space-8);
+}
+
+.post-content-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius-md);
+  margin: var(--space-8) 0;
+}
