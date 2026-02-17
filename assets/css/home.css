@@ -83,6 +83,19 @@
   height: 100%;
 }
 
+/* Animation initial state - prevent FOUC */
+.js-enabled .extension-card:not(.placeholder-card) {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.js-enabled .extension-card.placeholder-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
 .extension-card:hover {
   box-shadow: var(--shadow-hover);
   transform: translateY(-4px);
@@ -172,6 +185,19 @@
 .extension-card:hover .coming-soon-badge {
   border-color: var(--accent-light);
   color: var(--text-secondary);
+}
+
+/* Placeholder card styles */
+.placeholder-card {
+  border-style: dashed;
+}
+
+.placeholder-card .extension-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--bg-tertiary);
+  font-size: 2rem;
 }
 
 /* Stats Section (Optional) */
