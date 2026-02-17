@@ -135,29 +135,75 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Add animation on scroll (optional - for future enhancements)
-  const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  };
+  // Add animation on scroll with feature detection
+  const animatedCards = document.querySelectorAll('.extension-card:not(.placeholder-card)');
+  const placeholderCards = document.querySelectorAll('.placeholder-card');
   
-  const observer = new IntersectionObserver(function(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }
+  // Check if IntersectionObserver is supported
+  if ('IntersectionObserver' in window) {
+    const observerOptions = {
+      threshold: 0,
+      rootMargin: '0px'
+    };
+    
+    const observer = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    const placeholderObserver = new IntersectionObserver(function(entries, observer) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '0.6'; // Keep it slightly transparent
+          entry.target.style.transform = 'translateY(0)';
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+    
+    // Observe cards for fade-in animation
+    animatedCards.forEach(card => {
+      observer.observe(card);
     });
-  }, observerOptions);
-  
-  // Observe cards for fade-in animation (if desired)
-  document.querySelectorAll('.extension-card').forEach(card => {
-    // Initialize opacity and transform for animation
-    card.style.opacity = '0';
-    card.style.transform = 'translateY(20px)';
-    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(card);
-  });
+
+    // Handle placeholder cards separately (less prominent)
+    placeholderCards.forEach(card => {
+      placeholderObserver.observe(card);
+    });
+
+    // Fallback: Reveal cards after 1 second if they haven't been revealed yet
+    setTimeout(() => {
+      animatedCards.forEach(card => {
+        const computedOpacity = getComputedStyle(card).opacity;
+        if (computedOpacity === '0') {
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }
+      });
+      placeholderCards.forEach(card => {
+        const computedOpacity = getComputedStyle(card).opacity;
+        if (computedOpacity === '0') {
+          card.style.opacity = '0.6';
+          card.style.transform = 'translateY(0)';
+        }
+      });
+    }, 1000);
+  } else {
+    // Fallback for browsers without IntersectionObserver support
+    animatedCards.forEach(card => {
+      card.style.opacity = '1';
+      card.style.transform = 'translateY(0)';
+    });
+    placeholderCards.forEach(card => {
+      card.style.opacity = '0.6';
+      card.style.transform = 'translateY(0)';
+    });
+  }
   
 });
 
