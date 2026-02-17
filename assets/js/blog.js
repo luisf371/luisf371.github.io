@@ -108,12 +108,21 @@ function createPostCard(post) {
 }
 
 /**
+ * HTML Escape map for utility function
+ */
+const htmlEscapeMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#039;'
+};
+
+/**
  * Escape HTML to prevent XSS
  */
 function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+  return String(text).replace(/[&<>"']/g, m => htmlEscapeMap[m]);
 }
 
 // Log when loaded
