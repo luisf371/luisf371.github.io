@@ -135,10 +135,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   });
   
-  // Add animation on scroll (optional - for future enhancements)
+  // Add animation on scroll
   const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
+    threshold: 0,
+    rootMargin: '0px'
   };
   
   const observer = new IntersectionObserver(function(entries) {
@@ -150,14 +150,49 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
   
-  // Observe cards for fade-in animation (if desired)
-  document.querySelectorAll('.extension-card').forEach(card => {
+  // Observe cards for fade-in animation
+  const animatedCards = document.querySelectorAll('.extension-card:not(.placeholder-card)');
+  animatedCards.forEach(card => {
     // Initialize opacity and transform for animation
     card.style.opacity = '0';
     card.style.transform = 'translateY(20px)';
     card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
     observer.observe(card);
   });
+
+  // Handle placeholder cards separately (less prominent)
+  const placeholderCards = document.querySelectorAll('.placeholder-card');
+  placeholderCards.forEach(card => {
+    card.style.opacity = '0';
+    card.style.transform = 'translateY(20px)';
+    card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+
+    const placeholderObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '0.6'; // Keep it slightly transparent
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+    placeholderObserver.observe(card);
+  });
+
+  // Fallback: Reveal cards after 1 second if they haven't been revealed yet
+  setTimeout(() => {
+    animatedCards.forEach(card => {
+      if (card.style.opacity === '0') {
+        card.style.opacity = '1';
+        card.style.transform = 'translateY(0)';
+      }
+    });
+    placeholderCards.forEach(card => {
+      if (card.style.opacity === '0') {
+        card.style.opacity = '0.6';
+        card.style.transform = 'translateY(0)';
+      }
+    });
+  }, 1000);
   
 });
 
