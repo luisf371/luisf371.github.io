@@ -377,7 +377,6 @@ Content-Security-Policy: [full CSP string]
    - Performance-optimized
 
 6. **Utility Functions**
-   - Debounce helper for performance
    - Console log confirmation
 
 ### **Phase 7: Assets** ✅ Complete
@@ -787,7 +786,6 @@ Content-Security-Policy: [full CSP string]
 - [x] Email obfuscation
 - [x] Active page highlighting
 - [x] Scroll animations (Intersection Observer)
-- [x] Utility functions (debounce)
 - [x] No console errors
 - [x] Performance optimized
 
