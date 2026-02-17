@@ -71,9 +71,9 @@ function createPostCard(post) {
   // Post meta (date and reading time)
   const metaHTML = `
     <div class="blog-post-card-meta">
-      <time datetime="${post.date}" class="blog-post-card-date">${post.dateFormatted}</time>
+      <time datetime="${escapeHtml(post.date)}" class="blog-post-card-date">${escapeHtml(post.dateFormatted)}</time>
       <span class="blog-post-card-separator">•</span>
-      <span class="blog-post-card-read-time">${post.readTime}</span>
+      <span class="blog-post-card-read-time">${escapeHtml(post.readTime)}</span>
     </div>
   `;
   
