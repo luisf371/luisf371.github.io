@@ -698,6 +698,24 @@ code {
   display: none;
 }
 
+.rounded-md {
+  border-radius: var(--radius-md);
+}
+
+.text-tertiary {
+  color: var(--text-tertiary);
+}
+
+.list-secondary {
+  margin-left: 2rem;
+  color: var(--text-secondary);
+}
+
+.footer-copyright-note {
+  margin-top: 0.5rem;
+  font-size: 0.75rem;
+}
+
 /* Screen reader only */
 .sr-only {
   position: absolute;

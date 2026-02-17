@@ -206,7 +206,7 @@ function example() {
 ```html
 <img src="/assets/images/blog/my-image.png" 
      alt="Descriptive alt text"
-     style="max-width: 100%; height: auto; border-radius: 8px; margin: 2rem 0;">
+     class="post-content-image">
 ```
 
 ### Writing Tips
@@ -224,7 +224,7 @@ function example() {
 - ❌ Write walls of text without breaks
 - ❌ Forget to add alt text to images
 - ❌ Leave placeholder content in the template
-- ❌ Use inline styles (except for images)
+- ❌ Use inline styles (use classes instead)
 
 ---
 
