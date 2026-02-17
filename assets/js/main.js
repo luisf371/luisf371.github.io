@@ -207,18 +207,5 @@ document.addEventListener('DOMContentLoaded', function() {
   
 });
 
-// Utility: Debounce function for performance
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
-
 // Log when site is ready
 console.log('🚀 tekky.cc loaded successfully');
