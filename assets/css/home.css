@@ -190,7 +190,6 @@
 /* Placeholder card styles */
 .placeholder-card {
   border-style: dashed;
-  opacity: 0.6;
 }
 
 .placeholder-card .extension-icon {

@@ -179,13 +179,15 @@ document.addEventListener('DOMContentLoaded', function() {
     // Fallback: Reveal cards after 1 second if they haven't been revealed yet
     setTimeout(() => {
       animatedCards.forEach(card => {
-        if (card.style.opacity === '0' || !card.style.opacity) {
+        const computedOpacity = getComputedStyle(card).opacity;
+        if (computedOpacity === '0') {
           card.style.opacity = '1';
           card.style.transform = 'translateY(0)';
         }
       });
       placeholderCards.forEach(card => {
-        if (card.style.opacity === '0' || !card.style.opacity) {
+        const computedOpacity = getComputedStyle(card).opacity;
+        if (computedOpacity === '0') {
           card.style.opacity = '0.6';
           card.style.transform = 'translateY(0)';
         }
