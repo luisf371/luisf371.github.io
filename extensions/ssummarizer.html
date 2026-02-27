@@ -29,8 +29,8 @@
         <li><a href="../#extensions" class="nav-link">Extensions</a></li>
         <li><a href="../#applications" class="nav-link">Applications</a></li>
         <li><a href="../blog/" class="nav-link">Blog</a></li>
-        <li><a href="https://github.com/luisf371" class="nav-link" target="_blank"
-            rel="noopener noreferrer">GitHub</a></li>
+        <li><a href="https://github.com/luisf371" class="nav-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+        </li>
         <li><a href="../#contact" class="nav-link">Contact</a></li>
         <li>
           <button id="theme-toggle" class="theme-toggle" aria-label="Switch to dark mode">
@@ -87,67 +87,78 @@
     <section class="content-section">
       <h2 class="section-heading">Overview</h2>
       <p>
-        sSummarizer (Simple Summarizer) is an AI-powered Chrome extension that transforms long articles and YouTube
-        videos into concise, easy-to-digest summaries. Whether you're researching, learning, or just trying to save
-        time, sSummarizer helps you quickly understand the key points of any web content.
+        The web is noisy. You click an article, 4,000 words. YouTubers include sponsor and filler content. Check a
+        Reddit thread, 200+ nested comments.
+        sSummarizer cuts through the noise. One click turns any page into a clean, readable summary.
       </p>
       <p>
-        The extension supports multiple AI providers including OpenAI (GPT models), Anthropic (Claude), and any
-        compatible API endpoint. It features a beautiful floating window interface with real-time streaming responses,
-        so you can watch the summary being generated live.
+        sSummarizer is a lightweight, browser-native extension that runs entirely on your device. It uses a custom
+        content extractor to identify the main body of text, video transcripts, or nested comment structures, then sends
+        that context directly to your chosen AI provider for an accurate, high-quality summary.
       </p>
       <p>
-        For YouTube videos, sSummarizer automatically extracts transcripts and summarizes the video content without
-        needing to watch the entire video. The floating window is draggable and resizable, with adjustable font sizes
-        for better readability.
+        Connect directly to your favorite AI models like OpenAI, Claude, Gemini, OpenRouter, or Perplexity and watch the
+        summary generate in real-time. Keep the conversation going by asking follow-up questions directly in the
+        extension!
       </p>
     </section>
 
     <section class="content-section">
       <h2 class="section-heading">Key Features</h2>
       <ul class="features-list">
-        <li><strong>Multi-Provider AI Support:</strong> Connect to OpenAI, Anthropic, Gemini, Groq, Azure, and more</li>
-        <li><strong>YouTube Intelligence:</strong> Automatic transcript extraction with timestamp support and subtitle
-          preferences</li>
-        <li><strong>Reddit Optimization:</strong> Summarize entire threads with customizable comment depth and sorting
-          logic</li>
-        <li><strong>Context Menu Integration:</strong> Highlight any text and summarize it instantly via the right-click
-          menu</li>
-        <li><strong>Real-Time Streaming:</strong> Watch summaries generate in real-time with a smooth, responsive
-          interface</li>
-        <li><strong>Floating Window Interface:</strong> Draggable and resizable summary display with font size controls
+        <li><span><strong>Multi-Platform Support:</strong> Summarize web pages, news articles, YouTube videos, and
+            Reddit
+            threads.</span></li>
+        <li><span><strong>AI Provider Choice:</strong> Connect directly to your favorite AI models like OpenAI, Claude,
+            Gemini, OpenRouter, or Perplexity.</span></li>
+        <li><span><strong>Custom Slash Commands:</strong> Create and save personalized shortcuts like <code>/tldr</code>
+            or <code>/faq</code> that customize how the AI responds.</span></li>
+        <li><span><strong>Quick Slash Selection:</strong> Choose from your saved commands to instantly generate the
+            summary in
+            your preferred style.</span></li>
+        <li><span><strong>Interactive Chat:</strong> Keep the conversation going by asking follow-up questions!</span>
         </li>
-        <li><strong>Debug Mode:</strong> Inspect extracted content to understand the data being sent to the AI</li>
-        <li><strong>Security & Privacy:</strong> Content sanitization and local storage of API keys</li>
-        <li><strong>Performance Optimized:</strong> Efficient extraction with auto-truncation for oversized content</li>
+        <li><span><strong>Streaming Support:</strong> Watch the summary write itself in real-time.</span></li>
+        <li><span><strong>Context Menu:</strong> Highlight any text on a page, right-click, and easily summarize just
+            that
+            specific part.</span></li>
       </ul>
     </section>
 
     <section class="content-section">
       <h2 class="section-heading">Supported AI Providers</h2>
       <p>
-        sSummarizer works with any OpenAI-compatible API endpoint:
+        sSummarizer connects directly to your favorite AI providers. You provide your own API key—we don't markup AI
+        costs or act as a middleman.
       </p>
       <ul style="margin-left: 2rem; color: var(--text-secondary);">
-        <li><strong>OpenAI:</strong> GPT-3.5-Turbo, GPT-4, GPT-4-Turbo</li>
-        <li><strong>Anthropic:</strong> Claude models via compatible endpoints</li>
-        <li><strong>Custom APIs:</strong> Any service that implements the OpenAI chat completions format</li>
-        <li><strong>Local Models:</strong> Self-hosted AI models with compatible APIs</li>
+        <li><strong>OpenAI:</strong> GPT-5.2, GPT-5.3-Codex, etc.</li>
+        <li><strong>Anthropic:</strong> Claude 4.6 Opus, Claude 4.6 Sonnet, etc.</li>
+        <li><strong>Gemini:</strong> Gemini 3.1 Pro, Gemini 3 Flash, etc.</li>
+        <li><strong>OpenRouter:</strong> Access to dozens of models from various providers</li>
+        <li><strong>Perplexity:</strong> Sonar, Sonar Pro, Sonar Reasoning Pro or Sonar Deep Research</li>
       </ul>
       <p style="margin-top: 1.5rem;">
-        Configure your API endpoint, key, and model in the extension options page. The extension includes a connection
-        tester to verify your settings work correctly.
+        Configure your AI provider directly in the extension options page to get started. Many providers offer free
+        tiers!
       </p>
     </section>
 
     <section class="content-section">
-      <h2 class="section-heading">Screenshots</h2>
-      <div class="screenshot-placeholder">
-        <div class="screenshot-placeholder-icon">📸</div>
-        <h3 class="screenshot-placeholder-title">Screenshots Coming Soon</h3>
-        <p class="screenshot-placeholder-text">
-          Preview images will be added shortly to showcase the floating window interface and summarization features.
-        </p>
+      <h2 class="section-heading">Extension Preview</h2>
+      <img src="../assets/ssummarizer/ss-banner.png" alt="sSummarizer Banner"
+        style="width: 100%; border-radius: 8px; margin-bottom: 2rem; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+
+      <div class="screenshot-grid"
+        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+        <img src="../assets/ssummarizer/ss-intro.png" alt="Intro Screen"
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <img src="../assets/ssummarizer/ss-window.png" alt="Summarization Window"
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <img src="../assets/ssummarizer/ss-slash.png" alt="Slash Commands"
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        <img src="../assets/ssummarizer/ss-rc.png" alt="Right Click Menu Context"
+          style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
       </div>
     </section>
 
@@ -163,8 +174,8 @@
         <div class="installation-method">
           <h3>Option 2: Install from Source (Developer Mode)</h3>
           <ol>
-            <li>Download or clone the repository from <a href="https://github.com/luisf371/sSummarizer"
-                target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li>Download or clone the repository from <a href="https://github.com/luisf371/sSummarizer" target="_blank"
+                rel="noopener noreferrer">GitHub</a></li>
             <li>Open Chrome and navigate to <code>chrome://extensions/</code></li>
             <li>Enable <strong>"Developer mode"</strong> using the toggle in the top right corner</li>
             <li>Click <strong>"Load unpacked"</strong></li>
@@ -176,12 +187,10 @@
         <div class="installation-method">
           <h3>Configuration</h3>
           <ol>
-            <li><strong>API Endpoint URL:</strong> Enter your AI service endpoint (e.g.,
-              <code>https://api.openai.com/v1/chat/completions</code>)
-            </li>
-            <li><strong>API Key:</strong> Your authentication key from the AI provider</li>
-            <li><strong>Model Name:</strong> Specify which model to use (e.g., <code>gpt-3.5-turbo</code>,
-              <code>gpt-4</code>)
+            <li><strong>AI Provider:</strong> Choose from OpenAI, Claude, Gemini, OpenRouter, Perplexity, or Custom</li>
+            <li><strong>API Key:</strong> Your authentication key from the chosen AI provider</li>
+            <li><strong>Model Name:</strong> Specify which model to use (e.g., <code>gpt-5.2</code>,
+              <code>claude-4.6-sonnet-latest</code>)
             </li>
             <li><strong>System Prompt (Optional):</strong> Custom instructions for the AI to follow</li>
             <li>Click <strong>"Test Connection"</strong> to verify your settings</li>
@@ -194,12 +203,21 @@
     <section class="content-section">
       <h2 class="section-heading">How to Use</h2>
       <p>
-        <strong>For Web Pages:</strong> Navigate to any webpage and click the extension icon. The extension will extract
+        <strong>For Web Pages & Articles:</strong> Navigate to any webpage and click the extension icon. The extension
+        will extract
         the text content and generate a summary in a floating window.
       </p>
       <p>
         <strong>For YouTube Videos:</strong> Open any YouTube video page and click the extension icon. sSummarizer will
-        extract the video's auto-generated transcript and create a summary.
+        automatically pull the transcript from the current video and summarize it based on your prompt.
+      </p>
+      <p>
+        <strong>Slash Commands:</strong> Type a slash (<code>/</code>) in the input to quickly select configured prompts
+        like <code>/tldr</code> or <code>/faq</code> and customize the summary style.
+      </p>
+      <p>
+        <strong>Interactive Chat:</strong> After the initial summary completes, you can continue the chat to ask
+        follow-up questions, request deeper explanations, or clarify specific parts of the text.
       </p>
       <p>
         <strong>Window Controls:</strong> Drag the title bar to move the window, use A⁺/A⁻ buttons to adjust font size,
@@ -249,7 +267,7 @@
       <table class="technical-table">
         <tr>
           <td>Version</td>
-          <td>1.0.0</td>
+          <td>1.4</td>
         </tr>
         <tr>
           <td>Manifest Version</td>
@@ -265,7 +283,7 @@
         </tr>
         <tr>
           <td>Status</td>
-          <td>Active (v1.0.0)</td>
+          <td>Active (v1.4)</td>
         </tr>
       </table>
     </section>
