@@ -95,6 +95,10 @@ document.addEventListener('DOMContentLoaded', function() {
           behavior: 'smooth',
           block: 'start'
         });
+
+        // Accessibility: Move focus to the target element
+        targetElement.setAttribute('tabindex', '-1');
+        targetElement.focus({ preventScroll: true });
       }
     });
   });
@@ -206,19 +210,6 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
 });
-
-// Utility: Debounce function for performance
-function debounce(func, wait) {
-  let timeout;
-  return function executedFunction(...args) {
-    const later = () => {
-      clearTimeout(timeout);
-      func(...args);
-    };
-    clearTimeout(timeout);
-    timeout = setTimeout(later, wait);
-  };
-}
 
 // Log when site is ready
 console.log('🚀 tekky.cc loaded successfully');

@@ -60,7 +60,8 @@ async function loadBlogPosts() {
  */
 function createPostCard(post) {
   const card = document.createElement('a');
-  card.href = `./${post.slug}.html`;
+  // Use encodeURIComponent for the slug in the URL property
+  card.href = `./${encodeURIComponent(post.slug)}.html`;
   card.className = 'blog-post-card';
   
   // Add featured class if applicable
@@ -68,12 +69,12 @@ function createPostCard(post) {
     card.classList.add('blog-post-featured');
   }
   
-  // Post meta (date and reading time)
+  // Post meta (date and reading time) - all fields escaped to prevent XSS
   const metaHTML = `
     <div class="blog-post-card-meta">
-      <time datetime="${post.date}" class="blog-post-card-date">${post.dateFormatted}</time>
+      <time datetime="${escapeHtml(post.date)}" class="blog-post-card-date">${escapeHtml(post.dateFormatted)}</time>
       <span class="blog-post-card-separator">•</span>
-      <span class="blog-post-card-read-time">${post.readTime}</span>
+      <span class="blog-post-card-read-time">${escapeHtml(post.readTime)}</span>
     </div>
   `;
   
@@ -108,12 +109,21 @@ function createPostCard(post) {
 }
 
 /**
+ * HTML Escape map for utility function
+ */
+const htmlEscapeMap = {
+  '&': '&amp;',
+  '<': '&lt;',
+  '>': '&gt;',
+  '"': '&quot;',
+  "'": '&#039;'
+};
+
+/**
  * Escape HTML to prevent XSS
  */
 function escapeHtml(text) {
-  const div = document.createElement('div');
-  div.textContent = text;
-  return div.innerHTML;
+  return String(text).replace(/[&<>"']/g, m => htmlEscapeMap[m]);
 }
 
 // Log when loaded
