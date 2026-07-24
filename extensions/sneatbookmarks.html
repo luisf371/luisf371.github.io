@@ -11,7 +11,7 @@
   <meta name="description"
     content="Elegant tree-style bookmark management with a clean popup interface, custom themes, and enhanced user controls. Modernized fork of Neat Bookmarks.">
 
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/extension.css">
   <link rel="canonical" href="https://tekky.cc/extensions/sneatbookmarks.html">
@@ -27,8 +27,8 @@
         <span class="nav-toggle-icon"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="../#extensions" class="nav-link">Extensions</a></li>
-        <li><a href="../#applications" class="nav-link">Applications</a></li>
+        <li><a href="../#featured" class="nav-link">Highlights</a></li>
+        <li><a href="../#projects" class="nav-link">Projects</a></li>
         <li><a href="../blog/" class="nav-link">Blog</a></li>
         <li><a href="https://github.com/luisf371" class="nav-link" target="_blank"
             rel="noopener noreferrer">GitHub</a></li>
@@ -58,7 +58,7 @@
   <!-- Extension Header -->
   <header class="extension-header">
     <div class="container">
-      <a href="/" class="back-link">Back to Extensions</a>
+      <a href="../#projects" class="back-link">Back to projects</a>
 
       <div class="extension-header-content">
         <img src="../assets/images/icons/sneatbookmarks.png" alt="sNeatBookmarks icon" class="extension-header-icon">
@@ -70,7 +70,6 @@
           <div class="extension-meta">
             <span class="tag tag-primary">Productivity</span>
             <span class="tag">Bookmarks</span>
-            <span class="tag">Fork</span>
             <span class="tag">Manifest V3</span>
           </div>
 
@@ -104,6 +103,22 @@
         This fork maintains the minimal, fast performance of the original while ensuring compatibility with Manifest V3
         and modern Chrome standards.
       </p>
+    </section>
+
+    <!-- Fork Credit -->
+    <section class="content-section">
+      <div class="fork-credit">
+        <span class="fork-credit-icon" aria-hidden="true">🙏</span>
+        <div class="fork-credit-body">
+          <p class="fork-credit-label">Forked with thanks</p>
+          <p>
+            sNeatBookmarks builds on <a href="https://github.com/cheeaun/neat-bookmarks" target="_blank"
+              rel="noopener noreferrer">Neat Bookmarks</a> by <strong>Lim Chee Aun</strong>, released under the MIT
+            license. Sincere thanks to the original author — this fork modernizes the extension for Manifest V3 while
+            keeping the speed and simplicity that made the original great.
+          </p>
+        </div>
+      </div>
     </section>
 
     <!-- Features Section -->
@@ -220,15 +235,6 @@
           <td>bookmarks, tabs, favicon, storage</td>
         </tr>
         <tr>
-          <td>Type</td>
-          <td>Fork (based on Neat Bookmarks by Lim Chee Aun)</td>
-        </tr>
-        <tr>
-          <td>Original Project</td>
-          <td><a href="https://github.com/cheeaun/neat-bookmarks" target="_blank" rel="noopener noreferrer">Neat
-              Bookmarks</a></td>
-        </tr>
-        <tr>
           <td>License</td>
           <td>MIT</td>
         </tr>
@@ -253,8 +259,8 @@
         <ul class="footer-links">
           <li><a href="https://github.com/luisf371" class="footer-link" target="_blank"
               rel="noopener noreferrer">GitHub</a></li>
-          <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
-          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><button class="footer-link" id="email-link" type="button">contact [at] tekky [dot] cc</button></li>
+          <li><a href="#privacy-policy" class="footer-link">Privacy</a></li>
         </ul>
         <p class="footer-copyright">&copy; 2026 tekky.cc. All rights reserved.</p>
       </div>
