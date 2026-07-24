@@ -1,0 +1,131 @@
+{
+  "_comment": "Single source of truth for the portfolio. To add a project, copy an object in 'projects', edit the fields, and commit. 'featured: true' surfaces it in the Highlights section. 'category' drives the filter tabs. That's it — no build step.",
+  "profile": {
+    "handle": "luisf371",
+    "headline": "I build small, sharp tools that get out of your way.",
+    "subhead": "Chrome extensions and Windows apps for people who care about their workflow. No bloat, no accounts, no tracking — just focused software that does one thing well.",
+    "github": "https://github.com/luisf371",
+    "email": "contact@tekky.cc"
+  },
+  "categories": [
+    { "id": "extension", "label": "Extensions" },
+    { "id": "app", "label": "Desktop Apps" }
+  ],
+  "projects": [
+    {
+      "id": "ssummarizer",
+      "name": "sSummarizer",
+      "category": "extension",
+      "tagline": "AI summaries for any page, video, or thread.",
+      "description": "One click turns any web page, YouTube video, or Reddit thread into a clean, readable summary — powered by your own AI provider keys, running entirely on your device.",
+      "icon": "assets/images/icons/ssummarizer.png",
+      "tags": ["AI", "Productivity"],
+      "origin": "original",
+      "status": "active",
+      "badge": "v1.4",
+      "featured": true,
+      "highlights": [
+        "Bring your own key — OpenAI, Claude, Gemini, Perplexity, OpenRouter",
+        "Real-time streaming summaries with interactive follow-up chat",
+        "Custom slash commands like /tldr and /faq"
+      ],
+      "page": "extensions/ssummarizer.html",
+      "repo": "https://github.com/luisf371/sSummarizer"
+    },
+    {
+      "id": "swinshortcuts",
+      "name": "sWinShortcuts",
+      "category": "app",
+      "tagline": "Low-level Windows remapping & automation.",
+      "description": "A lightweight background service that remaps keyboard and mouse input per application. Custom mouse chords, Caps Lock modes, and a numpad launcher grid — with near-zero latency.",
+      "icon": "assets/images/icons/swinshortcuts.png",
+      "tags": ["Windows", "C# / .NET 8"],
+      "origin": "original",
+      "status": "active",
+      "badge": "WPF",
+      "featured": true,
+      "highlights": [
+        "Per-app profiles that switch automatically on the active window",
+        "Alt+mouse gestures and right-button chords mapped to any command",
+        "Runs silently in the tray on high-performance low-level hooks"
+      ],
+      "page": "apps/swinshortcuts.html",
+      "repo": "https://github.com/luisf371/sWinShortcuts"
+    },
+    {
+      "id": "stabcontrol",
+      "name": "sTabControl",
+      "category": "extension",
+      "tagline": "Complete control over tab behavior.",
+      "description": "Automate tab positioning, focus transitions, and duplicate prevention. Built for power users who keep a lot of tabs open and want them to behave.",
+      "icon": "assets/images/icons/stabcontrol.png",
+      "tags": ["Productivity", "Tabs"],
+      "origin": "original",
+      "status": "active",
+      "featured": false,
+      "highlights": [],
+      "page": "extensions/stabcontrol.html",
+      "repo": "https://github.com/luisf371/sTabControl"
+    },
+    {
+      "id": "sneatbookmarks",
+      "name": "sNeatBookmarks",
+      "category": "extension",
+      "tagline": "Tree-style bookmark management.",
+      "description": "A clean popup for managing bookmarks as a tree, with custom themes and fast search. A polished fork built for everyday use.",
+      "icon": "assets/images/icons/sneatbookmarks.png",
+      "tags": ["Productivity", "Bookmarks"],
+      "origin": "fork",
+      "status": "active",
+      "featured": false,
+      "highlights": [],
+      "page": "extensions/sneatbookmarks.html",
+      "repo": "https://github.com/luisf371/sNeatBookmarks"
+    },
+    {
+      "id": "sbookmarkcleaner",
+      "name": "sBookmarkCleaner",
+      "category": "extension",
+      "tagline": "Find and remove broken bookmarks.",
+      "description": "Automatically detects broken links, redirects, and duplicates so your bookmark collection stays lean and trustworthy.",
+      "icon": "assets/images/icons/sbookmarkcleaner.png",
+      "tags": ["Utilities", "Bookmarks"],
+      "origin": "original",
+      "status": "active",
+      "featured": false,
+      "highlights": [],
+      "page": "extensions/sbookmarkcleaner.html",
+      "repo": "https://github.com/luisf371/sBookmarkCleaner"
+    },
+    {
+      "id": "sgestures",
+      "name": "sGestures",
+      "category": "extension",
+      "tagline": "Navigate Chrome with mouse gestures.",
+      "description": "Simple, lightweight mouse gestures for faster browsing. Customizable actions with a tiny footprint.",
+      "icon": "assets/images/icons/sgestures.png",
+      "tags": ["Productivity", "Navigation"],
+      "origin": "original",
+      "status": "active",
+      "featured": false,
+      "highlights": [],
+      "page": "extensions/sgestures.html",
+      "repo": "https://github.com/luisf371/sGestures"
+    },
+    {
+      "id": "sundoclose",
+      "name": "sUndoClose",
+      "category": "extension",
+      "tagline": "Restore recently closed tabs & windows.",
+      "description": "Bring back accidentally closed tabs and windows with a keyboard shortcut. Never lose an important tab again.",
+      "icon": "assets/images/icons/sundoclose.png",
+      "tags": ["Productivity", "Tabs"],
+      "origin": "fork",
+      "status": "active",
+      "featured": false,
+      "highlights": [],
+      "page": "extensions/sundoclose.html",
+      "repo": "https://github.com/luisf371/sUndoClose"
+    }
+  ]
+}

@@ -11,7 +11,7 @@
   <meta name="description"
     content="Quickly restore recently closed tabs and windows with keyboard shortcuts. Never lose an important tab again.">
 
-  <link rel="icon" type="image/x-icon" href="../assets/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="../assets/css/main.css">
   <link rel="stylesheet" href="../assets/css/extension.css">
   <link rel="canonical" href="https://tekky.cc/extensions/sundoclose.html">
@@ -26,8 +26,8 @@
         <span class="nav-toggle-icon"></span>
       </button>
       <ul class="nav-links">
-        <li><a href="../#extensions" class="nav-link">Extensions</a></li>
-        <li><a href="../#applications" class="nav-link">Applications</a></li>
+        <li><a href="../#featured" class="nav-link">Highlights</a></li>
+        <li><a href="../#projects" class="nav-link">Projects</a></li>
         <li><a href="../blog/" class="nav-link">Blog</a></li>
         <li><a href="https://github.com/luisf371" class="nav-link" target="_blank"
             rel="noopener noreferrer">GitHub</a></li>
@@ -56,7 +56,7 @@
 
   <header class="extension-header">
     <div class="container">
-      <a href="/" class="back-link">Back to Extensions</a>
+      <a href="../#projects" class="back-link">Back to projects</a>
 
       <div class="extension-header-content">
         <img src="../assets/images/icons/sundoclose.png" alt="sUndoClose icon" class="extension-header-icon">
@@ -68,7 +68,6 @@
           <div class="extension-meta">
             <span class="tag tag-primary">Productivity</span>
             <span class="tag">Tabs</span>
-            <span class="tag">Fork</span>
             <span class="tag">Manifest V3</span>
           </div>
 
@@ -100,6 +99,22 @@
         With keyboard shortcut support (Alt+Z by default, MacCtrl+Z on Mac), recovering closed tabs is faster than ever.
         The extension is lightweight, fast, and designed to stay out of your way until you need it.
       </p>
+    </section>
+
+    <!-- Fork Credit -->
+    <section class="content-section">
+      <div class="fork-credit">
+        <span class="fork-credit-icon" aria-hidden="true">🙏</span>
+        <div class="fork-credit-body">
+          <p class="fork-credit-label">Forked with thanks</p>
+          <p>
+            sUndoClose builds on <a href="https://chromewebstore.google.com/detail/simpleundoclose/plmkckmepaemlbdcihcfiffecmmnofil"
+              target="_blank" rel="noopener noreferrer">SimpleUndoClose</a>. Sincere thanks to the original author — this
+            fork adds a search box, theming, and Manifest V3 support while keeping the one-click simplicity of the
+            original.
+          </p>
+        </div>
+      </div>
     </section>
 
     <section class="content-section">
@@ -227,10 +242,6 @@
           <td>tabs, favicon, storage, history</td>
         </tr>
         <tr>
-          <td>Type</td>
-          <td>Fork (based on Simple Undo Close)</td>
-        </tr>
-        <tr>
           <td>Default Shortcut</td>
           <td>Alt+Z (Windows/Linux), MacCtrl+Z (Mac)</td>
         </tr>
@@ -257,8 +268,8 @@
         <ul class="footer-links">
           <li><a href="https://github.com/luisf371" class="footer-link" target="_blank"
               rel="noopener noreferrer">GitHub</a></li>
-          <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
-          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><button class="footer-link" id="email-link" type="button">contact [at] tekky [dot] cc</button></li>
+          <li><a href="#privacy-policy" class="footer-link">Privacy</a></li>
         </ul>
         <p class="footer-copyright">&copy; 2026 tekky.cc. All rights reserved.</p>
       </div>

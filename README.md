@@ -1,17 +1,48 @@
-# tekky.cc - Chrome Extensions Portfolio
+# tekky.cc - Developer Portfolio
 
-Portfolio website showcasing Chrome extensions for productivity and enhanced browsing experience.
+A portfolio of Chrome extensions and Windows apps built by **luisf371** — focused productivity tools with no bloat and no tracking.
 
 **Live Site:** [https://tekky.cc](https://tekky.cc)
 
-## 📦 Featured Extensions
+## ✨ How the homepage works (data-driven — edit one file)
 
-1. **sNeatBookmarks** - Elegant tree-style bookmark management
-2. **sBookmarkCleaner** - Find and remove broken bookmarks and duplicates
-3. **sGestures** - Navigate with simple mouse gestures
-4. **sUndoClose** - Restore recently closed tabs and windows
-5. **sSummarizer** - AI-powered web content summarization
-6. **sTabControl** - Advanced tab management for power users
+The homepage renders itself from a single file: **[`data/projects.json`](data/projects.json)**.
+There is no build step and no framework — just edit the JSON, commit, and push.
+
+To **add or change a project**, edit `data/projects.json`:
+
+```jsonc
+{
+  "id": "myproject",                 // unique slug
+  "name": "myProject",
+  "category": "extension",           // "extension" or "app" (drives the filter tabs)
+  "tagline": "One-line pitch.",
+  "description": "Longer blurb shown on the card.",
+  "icon": "assets/images/icons/myproject.png",
+  "tags": ["Productivity", "Tabs"],  // first tag is highlighted
+  "origin": "original",              // "original" or "fork"
+  "status": "active",                // active | coming-soon | in-development
+  "badge": "v1.0",                   // small badge on featured cards (optional)
+  "featured": true,                  // true = shown in the Highlights section
+  "highlights": ["Bullet one", "Bullet two"],  // only used when featured
+  "page": "extensions/myproject.html",          // detail page (optional)
+  "repo": "https://github.com/luisf371/myProject"
+}
+```
+
+- **Highlights section** = every project with `"featured": true`.
+- **Filter tabs** appear automatically for whichever `category` values are in use.
+- **Stats in the hero** (project counts) are computed from the JSON — no manual updates.
+
+## 📦 Projects
+
+1. **sSummarizer** — AI-powered web content summarization *(featured)*
+2. **sWinShortcuts** — Low-level Windows keyboard/mouse remapper *(featured)*
+3. **sTabControl** — Advanced tab management for power users
+4. **sNeatBookmarks** — Tree-style bookmark management
+5. **sBookmarkCleaner** — Find and remove broken bookmarks and duplicates
+6. **sGestures** — Navigate with simple mouse gestures
+7. **sUndoClose** — Restore recently closed tabs and windows
 
 ## 🛠️ Tech Stack
 
@@ -24,17 +55,20 @@ Portfolio website showcasing Chrome extensions for productivity and enhanced bro
 
 ```
 .
-├── index.html              # Homepage
-├── extensions/             # Individual extension pages
-├── blog/                   # Blog section (placeholder)
+├── index.html              # Homepage (renders from data/projects.json)
+├── data/
+│   └── projects.json       # ★ Single source of truth for all projects
+├── extensions/             # Individual extension detail pages
+├── apps/                   # Individual desktop-app detail pages
+├── blog/                   # Blog section
 ├── assets/
-│   ├── css/               # Stylesheets
-│   ├── js/                # JavaScript
-│   └── images/            # Icons, screenshots
-├── CNAME                  # Custom domain
-├── robots.txt             # SEO
-├── sitemap.xml            # SEO
-└── _headers               # Security headers
+│   ├── css/                # Stylesheets (main.css, home.css, extension.css, blog.css)
+│   ├── js/                 # main.js (nav/theme) + home.js (project renderer)
+│   └── images/             # Icons, screenshots
+├── CNAME                   # Custom domain
+├── robots.txt              # SEO
+├── sitemap.xml             # SEO
+└── _headers                # Security headers
 ```
 
 ## 🚀 Deployment
