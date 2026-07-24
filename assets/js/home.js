@@ -66,6 +66,8 @@
     img.alt = project.name + ' icon';
     img.loading = 'lazy';
     img.decoding = 'async';
+    img.width = 96;
+    img.height = 96;
     media.appendChild(img);
     if (project.badge) media.appendChild(el('span', 'feature-badge', project.badge));
     card.appendChild(media);
@@ -120,6 +122,8 @@
     img.alt = project.name + ' icon';
     img.loading = 'lazy';
     img.decoding = 'async';
+    img.width = 48;
+    img.height = 48;
     top.appendChild(img);
 
     var titleWrap = el('div');
@@ -175,9 +179,15 @@
   }
 
   function applyFilter(grid, id) {
+    var visible = 0;
     grid.querySelectorAll('.project-card').forEach(function (card) {
       var show = id === 'all' || card.getAttribute('data-category') === id;
       card.classList.toggle('is-hidden', !show);
+      if (show) {
+        visible++;
+        var idx = card.querySelector('.card-index');
+        if (idx) idx.textContent = pad(visible);
+      }
     });
   }
 
