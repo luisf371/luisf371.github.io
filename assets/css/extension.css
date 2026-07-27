@@ -327,6 +327,53 @@
 }
 
 /* ============================================
+   Fork Credit / Attribution
+   Shown only on projects that build on someone
+   else's work — thanks and credit, in one place.
+   ============================================ */
+
+.fork-credit {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  padding: var(--space-6);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius-md);
+}
+
+.fork-credit-icon {
+  font-size: 1.75rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.fork-credit-body {
+  flex: 1;
+}
+
+.fork-credit-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-bottom: var(--space-2);
+}
+
+.fork-credit-body p {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.fork-credit-body p + p {
+  margin-top: var(--space-3);
+}
+
+/* ============================================
    Privacy Policy Section
    ============================================ */
 

@@ -8,33 +8,33 @@
     content="default-src 'self'; script-src 'self' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';">
 
   <!-- Primary Meta Tags -->
-  <title>tekky.cc - Chrome Extensions for Productivity</title>
-  <meta name="title" content="tekky.cc - Chrome Extensions for Productivity">
+  <title>tekky.cc — small, sharp tools by luisf371</title>
+  <meta name="title" content="tekky.cc — small, sharp tools by luisf371">
   <meta name="description"
-    content="Portfolio showcasing Chrome extensions for productivity and enhanced browsing experience. Features AI-powered tools, bookmark management, tab control, and more.">
-  <meta name="keywords" content="Chrome Extensions, Browser Extensions, Productivity, Bookmarks, AI, Tab Management">
-  <meta name="author" content="tekky.cc">
+    content="A portfolio of Chrome extensions and Windows apps built by luisf371 — focused productivity tools with no bloat, no accounts, and no tracking.">
+  <meta name="keywords" content="Chrome Extensions, Windows Apps, Productivity, Developer Portfolio, Bookmarks, AI, Tab Management">
+  <meta name="author" content="luisf371">
 
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://tekky.cc/">
-  <meta property="og:title" content="tekky.cc - Chrome Extensions for Productivity">
+  <meta property="og:title" content="tekky.cc — small, sharp tools by luisf371">
   <meta property="og:description"
-    content="Portfolio showcasing Chrome extensions for productivity and enhanced browsing experience.">
+    content="A portfolio of Chrome extensions and Windows apps — focused productivity tools with no bloat and no tracking.">
   <meta property="og:image" content="https://tekky.cc/assets/images/og-image.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://tekky.cc/">
-  <meta property="twitter:title" content="tekky.cc - Chrome Extensions for Productivity">
+  <meta property="twitter:title" content="tekky.cc — small, sharp tools by luisf371">
   <meta property="twitter:description"
-    content="Portfolio showcasing Chrome extensions for productivity and enhanced browsing experience.">
+    content="A portfolio of Chrome extensions and Windows apps — focused productivity tools with no bloat and no tracking.">
   <meta property="twitter:image" content="https://tekky.cc/assets/images/og-image.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232563ff'/%3E%3Ctext x='16' y='22' font-family='monospace' font-size='16' font-weight='700' text-anchor='middle' fill='white'%3Et%3C/text%3E%3C/svg%3E">
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./assets/css/main.css">
@@ -51,16 +51,15 @@
   <!-- Navigation -->
   <nav class="nav">
     <div class="nav-container">
-      <a href="./" class="nav-brand">tekky.cc</a>
+      <a href="./" class="nav-brand"><span class="nav-brand-mark">t</span>tekky<span class="nav-brand-dim">.cc</span></a>
 
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="nav-toggle-icon"></span>
       </button>
 
       <ul class="nav-links">
-        <li><a href="#extensions" class="nav-link">Extensions</a></li>
-        <li><a href="#applications" class="nav-link">Applications</a></li>
-        <!-- <li><a href="./blog/" class="nav-link">Blog</a></li> -->
+        <li><a href="#featured" class="nav-link">Highlights</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="https://github.com/luisf371" class="nav-link" target="_blank"
             rel="noopener noreferrer">GitHub</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
@@ -87,240 +86,112 @@
   </nav>
 
   <main id="main-content" tabindex="-1">
-    <!-- Hero Section -->
+
+    <!-- Hero -->
     <section class="hero">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <p class="kicker">// portfolio — luisf371</p>
+        <h1 class="hero-title" id="hero-title">I build small, sharp tools that get out of your way.</h1>
+        <p class="hero-subtitle" id="hero-subtitle">
+          Chrome extensions and Windows apps for people who care about their workflow.
+          No bloat, no accounts, no tracking — just focused software that does one thing well.
+        </p>
+        <div class="hero-actions">
+          <a href="#featured" class="btn btn-primary">See the highlights</a>
+          <a href="https://github.com/luisf371" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Browse the code</a>
+        </div>
+
+        <dl class="hero-stats" aria-label="Portfolio at a glance">
+          <div class="hero-stat">
+            <dt class="hero-stat-label">Shipped projects</dt>
+            <dd class="hero-stat-value" id="stat-projects">7</dd>
+          </div>
+          <div class="hero-stat">
+            <dt class="hero-stat-label">Browser extensions</dt>
+            <dd class="hero-stat-value" id="stat-extensions">6</dd>
+          </div>
+          <div class="hero-stat">
+            <dt class="hero-stat-label">Built from scratch</dt>
+            <dd class="hero-stat-value" id="stat-original">5</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Highlights / Featured -->
+    <section id="featured" class="section-block">
       <div class="container">
-        <h1 class="hero-title">Developer Portfolio & Tools</h1>
-      <p class="hero-subtitle">Crafting efficient Chrome extensions and Windows applications</p>
-      <div class="hero-actions">
-        <a href="#extensions" class="btn btn-primary">View Extensions</a>
-        <a href="#applications" class="btn btn-secondary">Desktop Apps</a>
+        <header class="block-head">
+          <p class="kicker">// highlights</p>
+          <h2 class="block-title">Featured work</h2>
+          <p class="block-sub">The two projects I've put the most into — and the ones worth starting with.</p>
+        </header>
+        <div class="featured-grid" id="featured-grid">
+          <!-- rendered from data/projects.json -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Extensions Section -->
-  <section id="extensions" class="extensions-section">
-    <div class="container">
-      <h2 class="section-title">Featured Extensions</h2>
+    <!-- All projects -->
+    <section id="projects" class="section-block section-block--alt">
+      <div class="container">
+        <header class="block-head">
+          <p class="kicker">// everything</p>
+          <h2 class="block-title">All projects</h2>
+          <p class="block-sub">Filter by what you're looking for.</p>
+        </header>
 
-      <div class="extensions-grid">
-
-        <!-- Extension Card: sNeatBookmarks -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/sneatbookmarks.png" alt="sNeatBookmarks icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sNeatBookmarks</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            Streamlined tree-style bookmark management with a clean popup interface, custom themes, and fast search
-            capabilities.
-          </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">Productivity</span>
-            <span class="tag">Bookmarks</span>
-            <span class="tag">Fork</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./extensions/sneatbookmarks.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">Coming Soon on Chrome Web Store</span>
-          </div>
+        <div class="filter-bar" id="filter-bar" role="group" aria-label="Filter projects by type">
+          <!-- filter buttons rendered from data -->
         </div>
 
-        <!-- Extension Card: sBookmarkCleaner -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/sbookmarkcleaner.png" alt="sBookmarkCleaner icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sBookmarkCleaner</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            Automatically find and remove broken bookmarks, detect redirects, and identify duplicates to keep your
-            bookmarks clean.
-          </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">Productivity</span>
-            <span class="tag">Utilities</span>
-            <span class="tag tag-success">Original</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./extensions/sbookmarkcleaner.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">Coming Soon on Chrome Web Store</span>
-          </div>
+        <div class="project-grid" id="project-grid">
+          <!-- rendered from data/projects.json -->
         </div>
 
-        <!-- Extension Card: sGestures -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/sgestures.png" alt="sGestures icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sGestures</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            Navigate Chrome with intuitive mouse gestures for faster browsing. Simple, lightweight, and customizable.
+        <noscript>
+          <p class="load-error">
+            This portfolio lists projects dynamically. With JavaScript disabled, browse them all on
+            <a href="https://github.com/luisf371" target="_blank" rel="noopener noreferrer">github.com/luisf371</a>.
           </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">Productivity</span>
-            <span class="tag">Navigation</span>
-            <span class="tag tag-success">Original</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./extensions/sgestures.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">Coming Soon on Chrome Web Store</span>
-          </div>
-        </div>
-
-        <!-- Extension Card: sUndoClose -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/sundoclose.png" alt="sUndoClose icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sUndoClose</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            Quickly restore recently closed tabs and windows with keyboard shortcuts. Never lose an important tab again.
-          </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">Productivity</span>
-            <span class="tag">Tabs</span>
-            <span class="tag">Fork</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./extensions/sundoclose.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">Coming Soon on Chrome Web Store</span>
-          </div>
-        </div>
-
-        <!-- Extension Card: sSummarizer -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/ssummarizer.png" alt="sSummarizer icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sSummarizer</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            AI-powered summarization for web pages and YouTube videos. Transform long content into concise summaries
-            instantly.
-          </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">AI</span>
-            <span class="tag">Productivity</span>
-            <span class="tag tag-success">Original</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./extensions/ssummarizer.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">Coming Soon on Chrome Web Store</span>
-          </div>
-        </div>
-
-        <!-- Extension Card: sTabControl -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/stabcontrol.png" alt="sTabControl icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sTabControl</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            Complete control over your browser's tab behaviors. Automate tab positioning, focus transitions, and prevent
-            duplicate tabs.
-          </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">Productivity</span>
-            <span class="tag">Tabs</span>
-            <span class="tag tag-success">Original</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./extensions/stabcontrol.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">Coming Soon on Chrome Web Store</span>
-          </div>
-        </div>
-
+        </noscript>
       </div>
-  </section>
+    </section>
 
-  <!-- Applications Section -->
-  <section id="applications" class="extensions-section"
-    style="background-color: var(--bg-secondary); border-top: 1px solid var(--border);">
-    <div class="container">
-      <h2 class="section-title">Desktop Applications</h2>
-      <p class="section-subtitle">High-performance tools for Windows</p>
-
-      <div class="extensions-grid">
-        <!-- App Card: sWinShortcuts -->
-        <div class="extension-card">
-          <div class="extension-card-header">
-            <img src="./assets/images/icons/swinshortcuts.png" alt="sWinShortcuts icon" class="extension-icon">
-            <div>
-              <h3 class="extension-card-title">sWinShortcuts</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            Low-level Windows keyboard and mouse remapper. Create per-app profiles for custom shortcuts and mouse
-            gestures.
-          </p>
-          <div class="extension-tags">
-            <span class="tag tag-primary">Utility</span>
-            <span class="tag">Windows</span>
-            <span class="tag tag-success">Original</span>
-          </div>
-          <div class="extension-card-actions">
-            <a href="./apps/swinshortcuts.html" class="extension-card-link">View Details</a>
-            <span class="coming-soon-badge">C# / .NET 8</span>
-          </div>
+    <!-- Contact / about strip -->
+    <section id="contact" class="contact-strip">
+      <div class="container">
+        <p class="kicker">// say hi</p>
+        <h2 class="contact-title">Got a bug, an idea, or just want to talk shop?</h2>
+        <p class="contact-sub">Everything here is open source. Issues and pull requests are always welcome.</p>
+        <div class="hero-actions">
+          <a href="https://github.com/luisf371" class="btn btn-primary" target="_blank" rel="noopener noreferrer">github.com/luisf371</a>
+          <button class="btn btn-secondary" id="email-link" type="button">contact [at] tekky [dot] cc</button>
         </div>
-
-        <!-- Future App Placeholder -->
-        <div class="extension-card placeholder-card">
-          <div class="extension-card-header">
-            <div class="extension-icon" aria-hidden="true">
-              🚀
-            </div>
-            <div>
-              <h3 class="extension-card-title">More Apps Coming Soon</h3>
-            </div>
-          </div>
-          <p class="extension-card-description">
-            New productivity tools for Windows and macOS are currently in development.
-          </p>
-          <div class="extension-tags">
-            <span class="tag">In Development</span>
-          </div>
-          <div class="extension-card-actions">
-            <span class="coming-soon-badge">Coming Q2 2026</span>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
   </main>
 
   <!-- Footer -->
-  <footer class="footer" id="contact">
+  <footer class="footer">
     <div class="container">
       <div class="footer-content">
+        <span class="footer-brand"><span class="nav-brand-mark">t</span>tekky<span class="nav-brand-dim">.cc</span></span>
         <ul class="footer-links">
           <li><a href="https://github.com/luisf371" class="footer-link" target="_blank"
               rel="noopener noreferrer">GitHub</a></li>
-          <li><span class="footer-link" id="email-link">contact [at] tekky [dot] cc</span></li>
-          <li><a href="#" class="footer-link">Privacy</a></li>
+          <li><a href="#featured" class="footer-link">Highlights</a></li>
+          <li><a href="#projects" class="footer-link">Projects</a></li>
         </ul>
-        <p class="footer-copyright">&copy; 2026 tekky.cc. All rights reserved.</p>
-        <p class="footer-copyright" style="margin-top: 0.5rem; font-size: 0.75rem;">This site uses privacy-focused
-          analytics.</p>
+        <p class="footer-copyright">&copy; 2026 tekky.cc · Built static, hosted on GitHub Pages. Privacy-focused analytics only.</p>
       </div>
     </div>
   </footer>
 
   <!-- JavaScript -->
   <script src="./assets/js/main.js"></script>
+  <script src="./assets/js/home.js"></script>
 
   <!-- Cloudflare Web Analytics -->
   <!-- To enable: Sign up at https://dash.cloudflare.com → Analytics → Web Analytics -->
