@@ -1,7 +1,7 @@
 /**
  * tekky.cc - Homepage project renderer
  *
- * Reads data/projects.json and builds the Highlights + All Projects sections.
+ * Reads data/projects.json and builds the project grid and its filter tabs.
  * Everything is created with DOM APIs (no innerHTML with data) so untrusted
  * fields can never inject markup. To change what shows up, edit the JSON —
  * this file rarely needs touching.
@@ -12,11 +12,6 @@
   var DATA_URL = './data/projects.json';
 
   var CATEGORY_LABELS = { extension: 'Extension', app: 'Desktop App' };
-  var STATUS_LABELS = {
-    active: 'Active',
-    'coming-soon': 'Coming soon',
-    'in-development': 'In development'
-  };
 
   // --- tiny DOM helpers ----------------------------------------------------
   function el(tag, className, text) {
@@ -39,6 +34,7 @@
     return wrap;
   }
 
+  // A single link per card. The detail page carries the link to the source.
   function actionsRow(project) {
     var wrap = el('div', 'card-actions');
     if (project.page) {
@@ -46,75 +42,13 @@
       details.href = project.page;
       wrap.appendChild(details);
     }
-    if (project.repo) {
-      var repo = el('a', 'card-link card-link--muted', 'Source');
-      repo.href = project.repo;
-      repo.target = '_blank';
-      repo.rel = 'noopener noreferrer';
-      wrap.appendChild(repo);
-    }
     return wrap;
   }
 
-  // --- featured card -------------------------------------------------------
-  function featuredCard(project, index) {
-    var card = el('article', 'feature-card reveal');
-
-    var media = el('div', 'feature-card-media');
-    var img = el('img');
-    img.src = project.icon;
-    img.alt = project.name + ' icon';
-    img.loading = 'lazy';
-    img.decoding = 'async';
-    img.width = 96;
-    img.height = 96;
-    media.appendChild(img);
-    if (project.badge) media.appendChild(el('span', 'feature-badge', project.badge));
-    card.appendChild(media);
-
-    var body = el('div', 'feature-card-body');
-
-    var head = el('div', 'card-head');
-    head.appendChild(el('span', 'card-index', pad(index + 1)));
-    head.appendChild(el('span', 'card-cat', metaLine(project)));
-    body.appendChild(head);
-
-    var title = el('h3', 'card-title');
-    var titleLink = el('a', null, project.name);
-    titleLink.href = project.page || project.repo || '#';
-    title.appendChild(titleLink);
-    body.appendChild(title);
-
-    body.appendChild(el('p', 'card-tagline', project.tagline));
-    body.appendChild(el('p', 'card-desc', project.description));
-
-    if (project.highlights && project.highlights.length) {
-      var list = el('ul', 'highlight-list');
-      project.highlights.forEach(function (h) {
-        list.appendChild(el('li', null, h));
-      });
-      body.appendChild(list);
-    }
-
-    body.appendChild(tagRow(project));
-    body.appendChild(actionsRow(project));
-
-    card.appendChild(body);
-    return card;
-  }
-
-  // --- compact grid card ---------------------------------------------------
-  function projectCard(project, index) {
+  // --- project card --------------------------------------------------------
+  function projectCard(project) {
     var card = el('article', 'project-card reveal');
     card.setAttribute('data-category', project.category);
-
-    var head = el('div', 'card-head');
-    head.appendChild(el('span', 'card-index', pad(index + 1)));
-    var status = el('span', 'card-status card-status--' + project.status);
-    status.appendChild(el('span', 'status-dot'));
-    status.appendChild(document.createTextNode(STATUS_LABELS[project.status] || project.status));
-    head.appendChild(status);
-    card.appendChild(head);
 
     var top = el('div', 'project-card-top');
     var img = el('img', 'project-icon');
@@ -141,10 +75,6 @@
     card.appendChild(actionsRow(project));
 
     return card;
-  }
-
-  function pad(n) {
-    return n < 10 ? '0' + n : String(n);
   }
 
   // --- filtering -----------------------------------------------------------
@@ -189,11 +119,7 @@
     cards.forEach(function (card) {
       var show = id === 'all' || card.getAttribute('data-category') === id;
       card.classList.toggle('is-hidden', !show);
-      if (show) {
-        visible++;
-        var idx = card.querySelector('.card-index');
-        if (idx) idx.textContent = pad(visible);
-      }
+      if (show) visible++;
     });
     // Tell assistive tech what the filter did; the grid changes silently otherwise.
     var status = document.getElementById('filter-status');
@@ -224,49 +150,14 @@
     }, 1200);
   }
 
-  // --- hero copy / stats from profile --------------------------------------
-  function hydrateProfile(profile, projects) {
-    if (!profile) return;
-    setText('hero-title', profile.headline);
-    setText('hero-subtitle', profile.subhead);
-
-    var total = projects.length;
-    var original = projects.filter(function (p) { return p.origin === 'original'; }).length;
-    var exts = projects.filter(function (p) { return p.category === 'extension'; }).length;
-
-    setStat('stat-projects', total);
-    setStat('stat-extensions', exts);
-    setStat('stat-original', original);
-  }
-
-  function setText(id, value) {
-    var node = document.getElementById(id);
-    if (node && value) node.textContent = value;
-  }
-
-  function setStat(id, value) {
-    var node = document.getElementById(id);
-    if (node) node.textContent = value;
-  }
-
   // --- boot ----------------------------------------------------------------
   function render(data) {
     var projects = data.projects || [];
     var categories = data.categories || [];
 
-    hydrateProfile(data.profile, projects);
-
-    var featuredGrid = document.getElementById('featured-grid');
-    if (featuredGrid) {
-      var featured = projects.filter(function (p) { return p.featured; });
-      featured.forEach(function (p, i) { featuredGrid.appendChild(featuredCard(p, i)); });
-      var featuredSection = document.getElementById('featured');
-      if (featuredSection && !featured.length) featuredSection.hidden = true;
-    }
-
     var grid = document.getElementById('project-grid');
     if (grid) {
-      projects.forEach(function (p, i) { grid.appendChild(projectCard(p, i)); });
+      projects.forEach(function (p) { grid.appendChild(projectCard(p)); });
       var bar = document.getElementById('filter-bar');
       if (bar) buildFilters(bar, grid, categories, projects);
     }
@@ -289,7 +180,7 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var grid = document.getElementById('project-grid');
-    if (!grid && !document.getElementById('featured-grid')) return; // not the homepage
+    if (!grid) return; // not the homepage
 
     fetch(DATA_URL, { cache: 'no-cache' })
       .then(function (res) {
@@ -299,7 +190,7 @@
       .then(render)
       .catch(function (err) {
         console.error('tekky.cc: could not load projects.json', err);
-        showError(grid || document.getElementById('featured-grid'));
+        showError(grid);
       });
   });
 })();
