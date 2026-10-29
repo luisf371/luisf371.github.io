@@ -43,16 +43,12 @@
   margin-bottom: 0;
 }
 
-/* Reveal-on-scroll (progressive enhancement; JS adds .is-visible). */
-.js-enabled .reveal {
+/* Reveal-on-scroll (progressive enhancement; JS adds .is-visible).
+   Only the hidden state is styled here: once a card is visible these rules
+   stop matching, so the cards' own :hover lift and transitions apply. */
+.js-enabled .reveal:not(.is-visible) {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.55s ease, transform 0.55s ease;
-}
-
-.js-enabled .reveal.is-visible {
-  opacity: 1;
-  transform: none;
 }
 
 /* ---- hero -------------------------------------------------------------- */
@@ -78,10 +74,11 @@
   pointer-events: none;
 }
 
+/* No max-width here: the container's left edge must line up with the sections
+   below. Line length is capped on the title/subtitle instead. */
 .hero-inner {
   position: relative;
   z-index: 1;
-  max-width: 820px;
 }
 
 .hero-title {
@@ -268,7 +265,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  transition: opacity 0.5s ease, transform var(--transition-slow), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .feature-card:hover {
@@ -403,7 +400,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   padding: var(--space-6);
-  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
+  transition: opacity 0.5s ease, transform var(--transition-slow), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .project-card:hover {

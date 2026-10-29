@@ -151,16 +151,21 @@
   function buildFilters(bar, grid, categories, projects) {
     var buttons = [];
 
+    function setActive(active) {
+      buttons.forEach(function (b) {
+        var on = b === active;
+        b.classList.toggle('is-active', on);
+        b.setAttribute('aria-pressed', on ? 'true' : 'false');
+      });
+    }
+
     function make(id, label) {
       var btn = el('button', 'filter-btn', label);
       btn.type = 'button';
       btn.setAttribute('data-filter', id);
+      btn.setAttribute('aria-pressed', 'false');
       btn.addEventListener('click', function () {
-        buttons.forEach(function (b) {
-          var on = b === btn;
-          b.classList.toggle('is-active', on);
-          b.setAttribute('aria-pressed', on ? 'true' : 'false');
-        });
+        setActive(btn);
         applyFilter(grid, id);
       });
       buttons.push(btn);
@@ -168,19 +173,20 @@
       return btn;
     }
 
-    make('all', 'All').classList.add('is-active');
-    buttons[0].setAttribute('aria-pressed', 'true');
+    make('all', 'All');
     categories.forEach(function (c) {
       // only show a category tab if at least one project uses it
       if (projects.some(function (p) { return p.category === c.id; })) {
         make(c.id, c.label);
       }
     });
+    setActive(buttons[0]);
   }
 
   function applyFilter(grid, id) {
     var visible = 0;
-    grid.querySelectorAll('.project-card').forEach(function (card) {
+    var cards = grid.querySelectorAll('.project-card');
+    cards.forEach(function (card) {
       var show = id === 'all' || card.getAttribute('data-category') === id;
       card.classList.toggle('is-hidden', !show);
       if (show) {
@@ -189,6 +195,11 @@
         if (idx) idx.textContent = pad(visible);
       }
     });
+    // Tell assistive tech what the filter did; the grid changes silently otherwise.
+    var status = document.getElementById('filter-status');
+    if (status) {
+      status.textContent = 'Showing ' + visible + ' of ' + cards.length + ' projects';
+    }
   }
 
   // --- reveal-on-scroll (shared pattern, progressive enhancement) ----------
@@ -221,8 +232,7 @@
 
     var total = projects.length;
     var original = projects.filter(function (p) { return p.origin === 'original'; }).length;
-    var apps = projects.filter(function (p) { return p.category === 'app'; }).length;
-    var exts = total - apps;
+    var exts = projects.filter(function (p) { return p.category === 'extension'; }).length;
 
     setStat('stat-projects', total);
     setStat('stat-extensions', exts);

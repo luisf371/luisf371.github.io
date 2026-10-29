@@ -131,8 +131,10 @@ document.addEventListener('DOMContentLoaded', function() {
   // Highlight current page in navigation
   const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-link').forEach(link => {
+    // In-page anchors (#featured, #projects, ...) share the page's path, so
+    // matching on path alone would light up every one of them at once.
     const linkPath = new URL(link.href).pathname;
-    if (linkPath === currentPath) {
+    if (linkPath === currentPath && !link.hash) {
       link.classList.add('active');
     } else {
       link.classList.remove('active');
