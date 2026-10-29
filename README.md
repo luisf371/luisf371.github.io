@@ -16,27 +16,22 @@ To **add or change a project**, edit `data/projects.json`:
   "id": "myproject",                 // unique slug
   "name": "myProject",
   "category": "extension",           // "extension" or "app" (drives the filter tabs)
-  "tagline": "One-line pitch.",
-  "description": "Longer blurb shown on the card.",
+  "tagline": "One-line pitch shown on the card.",
   "icon": "assets/images/icons/myproject.png",
   "tags": ["Productivity", "Tabs"],  // first tag is highlighted
-  "badge": "v1.0",                   // small badge on featured cards (optional)
-  "featured": true,                  // true = shown in the featured row at the top
-  "highlights": ["Bullet one", "Bullet two"],  // only used when featured
   "page": "extensions/myproject.html",          // detail page (optional; the card title links to repo without it)
   "repo": "https://github.com/luisf371/myProject"
 }
 ```
 
-- **Featured row** = every project with `"featured": true`.
 - **Filter tabs** appear automatically for whichever `category` values are in use.
 - **Cards** have a single "View details" link to `page`. They don't link to `repo` directly, so each detail page should carry the link to the source.
 - The **intro text** at the top of the page lives in `index.html`, not in the JSON.
 
 ## 📦 Projects
 
-1. **sSummarizer** — AI-powered web content summarization *(featured)*
-2. **sWinShortcuts** — Low-level Windows keyboard/mouse remapper *(featured)*
+1. **sSummarizer** — AI-powered web content summarization
+2. **sWinShortcuts** — Low-level Windows keyboard/mouse remapper
 3. **sTabControl** — Advanced tab management for power users
 4. **sNeatBookmarks** — Tree-style bookmark management
 5. **sBookmarkCleaner** — Find and remove broken bookmarks and duplicates
