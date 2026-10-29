@@ -78,8 +78,8 @@ This site is automatically deployed via GitHub Pages when changes are pushed to 
 ### Local Setup
 
 1. Clone the repository
-2. Open `index.html` in a browser (no build process needed)
-3. For local testing: Use any static file server
+2. Serve the folder with any static file server (no build process needed), e.g. `python3 -m http.server 8000`, then open <http://localhost:8000>
+3. Don't open `index.html` directly from disk — the homepage `fetch()`es `data/projects.json`, which browsers block on `file://` (see [`LOCAL_DEVELOPMENT.md`](LOCAL_DEVELOPMENT.md))
 
 ### GitHub Pages Configuration
 

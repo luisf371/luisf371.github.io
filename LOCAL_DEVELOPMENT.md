@@ -56,17 +56,22 @@ The leading `/` means "root of the web server", which doesn't exist when opening
 
 A local web server makes these paths work correctly.
 
+The homepage also loads its project list with `fetch('./data/projects.json')`, and browsers refuse
+`fetch()` on `file://` URLs. Without a server the page shows the "could not load" fallback instead of the
+project cards.
+
 ---
 
 ## Testing Checklist
 
 Once the server is running, test:
 
-- [ ] Homepage loads with background gradient
-- [ ] All 6 extension icons appear
+- [ ] Homepage loads, with 2 featured cards under "Featured work"
+- [ ] All 7 project icons appear in the "All projects" grid
+- [ ] Filter buttons (All / Extensions / Desktop Apps) show and hide cards
 - [ ] Navigation menu works
 - [ ] Mobile menu (resize browser to < 768px)
-- [ ] Click on extension cards → detail pages load
+- [ ] Click on project cards → detail pages load
 - [ ] Images load on extension pages
 - [ ] Footer email click works
 - [ ] No console errors (F12 → Console tab)
