@@ -66,7 +66,7 @@ project cards.
 
 Once the server is running, test:
 
-- [ ] Homepage loads, with 2 featured cards under "Featured work"
+- [ ] Homepage loads, with 2 featured cards directly under the intro
 - [ ] All 7 project icons appear in the "All projects" grid
 - [ ] Filter buttons (All / Extensions / Desktop Apps) show and hide cards
 - [ ] Navigation menu works
